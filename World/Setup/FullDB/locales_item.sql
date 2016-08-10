@@ -1,27 +1,14 @@
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2015 MaNGOSZero <https://github.com/mangoszero>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: localhost    Database: mangos3
+-- ------------------------------------------------------
+-- Server version	5.5.37
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -63,8 +50,7 @@ CREATE TABLE `locales_item` (
 
 LOCK TABLES `locales_item` WRITE;
 /*!40000 ALTER TABLE `locales_item` DISABLE KEYS */;
-INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES
-(25,'','','','','','','','Иссеченный короткий меч',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES (25,'','','','','','','','Иссеченный короткий меч',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (35,'','','','','','','','Гнутый посох',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (36,'','','','','','','','Иссеченная палица',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (37,'','','','','','','','Старый топор',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -9006,8 +8992,7 @@ INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `nam
 (14938,'','','','','','','','Героические наручи',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (14939,'','','','','','','','Военный нагрудный доспех',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (14940,'','','','','','','','Военные башмаки',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES
-(14941,'','','','','','','','Военные защитные наручи',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES (14941,'','','','','','','','Военные защитные наручи',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (14942,'','','','','','','','Военные рукавицы',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (14943,'','','','','','','','Военный пояс',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (14944,'','','','','','','','Военная корона',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -17390,8 +17375,7 @@ INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `nam
 (26026,'','','','','','','','Изысканно обработанный пояс',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (26027,'','','','','','','','Поводок элекка в пятнах пота Кессела',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (26028,'','','','','','','','Грибные поручи Джессеры',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'');
-INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES
-(26030,'','','','','','','','Грибной хауберк Джессеры',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
+INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES (26030,'','','','','','','','Грибной хауберк Джессеры',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (26031,'','','','','','','','Доспех наездника на элекках',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (26032,'','','','','','','','Украшенные кристаллами набедренники',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (26033,'','','','','','','','Железные набедренники воздаятеля',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
@@ -25733,8 +25717,7 @@ INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `nam
 (42955,'','','','','','','','Символ внезапного удара',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (41547,'','','','','','','','Символ ледяного шока',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (41533,'','','','','','','','Символ тотема исцеляющего потока',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES
-(41535,'','','','','','','','Символ возвращения тотемов',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES (41535,'','','','','','','','Символ возвращения тотемов',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (41541,'','','','','','','','Символ водного щита',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (41527,'','','','','','','','Символ оружия жизни земли',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (41542,'','','','','','','','Символ оружия неистовства ветра',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -33969,8 +33952,7 @@ INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `nam
 (47248,'','','','','','','','Ботфорты гнетущей судьбы',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (47496,'','','','','','','','Поручи осторожного наблюдателя',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (46544,'','','','','','','','Любопытный маленький волчер',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'');
-INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES
-(77766,'','','','','','','','Копия плетеных наплечников защитника',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
+INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES (77766,'','','','','','','','Копия плетеных наплечников защитника',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (46545,'','','','','','','','Любопытный маленький оракул',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (46693,'','','','','','','','Бумажный дирижаблик',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Детский размерчик.'),
 (46707,'','','','','','','','Розовый толстокожий детеныш',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Учит призывать этого спутника.'),
@@ -42144,8 +42126,7 @@ INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `nam
 (55530,'','','','','','','','Шлем Каменной Плотины',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (55531,'','','','','','','','Шлем Хрустальной шахты',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (55532,'','','','','','','','Шлем Сталежара',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES
-(55533,'','','','','','','','Ножные латы Молота Ужаса',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES (55533,'','','','','','','','Ножные латы Молота Ужаса',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (55534,'','','','','','','','Ножные латы Ретбана',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (55535,'','','','','','','','Ножные латы Яшмовой шахты',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (55536,'','','','','','','','Ножные латы Зловещего холма',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -50777,8 +50758,7 @@ INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `nam
 (66905,'','','','','','','','Наплеч тайной операции',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (66906,'','','','','','','','Наручи затерянного города',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (66907,'','','','','','','','Наплечье капитана Хадана',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'');
-INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES
-(66908,'','','','','','','','Ботфорты Неферсета',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
+INSERT INTO `locales_item` (`entry`, `name_loc1`, `name_loc2`, `name_loc3`, `name_loc4`, `name_loc5`, `name_loc6`, `name_loc7`, `name_loc8`, `description_loc1`, `description_loc2`, `description_loc3`, `description_loc4`, `description_loc5`, `description_loc6`, `description_loc7`, `description_loc8`) VALUES (66908,'','','','','','','','Ботфорты Неферсета',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (66909,'','','','','','','','Рамкахенские солдатские ботинки',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (66910,'','','','','','','','Мантия гнилечиста',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
 (66911,'','','','','','','','Автономные наголенники',NULL,NULL,NULL,NULL,NULL,NULL,NULL,''),
@@ -54121,3 +54101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2015-01-24 21:54:10
