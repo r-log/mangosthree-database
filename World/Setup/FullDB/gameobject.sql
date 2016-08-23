@@ -1,14 +1,27 @@
--- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: localhost    Database: mangos3
--- ------------------------------------------------------
--- Server version	5.5.37
+-- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSZero <https://github.com/mangoszero>
+--
+-- This program is free software; you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation; either version 2 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program; if not, write to the Free Software
+-- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+--
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -51,7 +64,8 @@ CREATE TABLE `gameobject` (
 
 LOCK TABLES `gameobject` WRITE;
 /*!40000 ALTER TABLE `gameobject` DISABLE KEYS */;
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (92287,1618,530,1,65535,-1770.51,-11882,18.0122,1.10325,0,0,0.524072,0.851674,600,100,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(92287,1618,530,1,65535,-1770.51,-11882,18.0122,1.10325,0,0,0.524072,0.851674,600,100,1),
 (74676,181557,530,1,65535,3433.86,2557.05,134.437,3.07572,0,0,0.999458,0.0329303,1800,100,1),
 (72505,189980,571,1,65535,8196.93,-2994.83,1274.01,3.50452,0,0,0.983581,-0.180469,1800,100,1),
 (92286,1617,530,1,65535,-1788.1,-11944.6,14.7515,2.91752,0,0,0.99373,0.111802,600,100,1),
@@ -11614,7 +11628,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (54342,180471,1,1,65535,6405.81,558.115,17.1509,-2.04204,0,0,-0.852641,0.522496,180,100,1),
 (188377,174045,230,1,1,1211.41,-443.718,-102.585,0,0,0,-1,0,7200,255,1),
 (188376,174480,230,1,1,878.786,-168.69,-49.7396,0,0,0,-0.997858,0.0654165,7200,255,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (188375,174565,230,1,1,804.315,-356.08,-49.3661,0,0,0,0.366501,0.930418,7200,255,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(188375,174565,230,1,1,804.315,-356.08,-49.3661,0,0,0,0.366501,0.930418,7200,255,1),
 (54341,180471,1,1,65535,6403.53,549.125,9.75999,-1.91986,0,0,-0.819151,0.573577,180,100,1),
 (54340,180471,1,1,65535,6406.47,557.894,9.63274,-1.76278,0,0,-0.771624,0.636079,180,100,1),
 (54339,180471,1,1,65535,6382.83,544.002,16.2825,-1.55334,0,0,-0.700908,0.713252,180,100,1),
@@ -23308,7 +23323,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (67438,182955,530,1,1,-2673.14,7288.92,36.853,-1.97222,0,0,-0.833885,0.551938,180,100,1),
 (67439,182956,530,1,1,-2563.05,3247.15,-1.25876,1.43117,0,0,0.656059,0.75471,180,100,1),
 (67440,182957,530,1,1,-3800.27,3656.32,272.124,2.46091,0,0,0.942641,0.333809,180,100,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (67441,182957,530,1,1,-4016.85,3550.19,272.124,2.04204,0,0,0.852641,0.522496,180,100,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(67441,182957,530,1,1,-4016.85,3550.19,272.124,2.04204,0,0,0.852641,0.522496,180,100,1),
 (67442,182957,530,1,1,-3893.08,3351.78,272.124,0.087266,0,0,0.0436192,0.999048,180,100,1),
 (67443,182957,530,1,1,-3693.95,3429.23,272.124,-0.418879,0,0,-0.207912,0.978148,180,100,1),
 (67444,182957,530,1,1,-3891.39,3500.79,272.124,-2.82743,0,0,-0.987688,0.156436,180,100,1),
@@ -35093,7 +35109,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (24294,1732,1,1,65535,7448.81,-142.355,3.32038,1.49835,0,0,0.681035,0.732251,600,100,1),
 (24293,1732,1,1,65535,7442.55,-1004.11,-6.07382,1.58711,0,0,0.712851,0.701316,600,100,1),
 (24292,1732,1,1,65535,7421.09,-789.96,16.9391,1.58319,0,0,0.711475,0.702711,600,100,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (24291,1732,1,1,65535,741.178,-1225.15,104.207,6.25994,0,0,0.0116223,-0.999932,600,100,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(24291,1732,1,1,65535,741.178,-1225.15,104.207,6.25994,0,0,0.0116223,-0.999932,600,100,1),
 (24290,1732,1,1,65535,-74.3512,312.8,119.258,1.6144,0,0,0.722354,0.691524,600,100,1),
 (24289,1732,1,1,65535,7388.99,-370.781,5.5149,0.00217299,0,0,0.00108649,0.999999,600,100,1),
 (24288,1735,0,1,65535,-13803.5,-120.083,23.512,5.36352,0,0,0.443798,-0.896127,600,100,1),
@@ -46866,7 +46883,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (20678,192681,604,3,1,1893.87,829.706,176.65,3.92406,0,0,0.924439,-0.381329,300,0,1),
 (20680,193212,604,3,1,1893.87,829.706,176.65,3.92406,0,0,0.924439,-0.381329,300,0,1),
 (20671,193188,604,3,1,1775.14,743.463,118.97,4.6713,0,0,0.721484,-0.692431,300,0,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (20664,193212,604,3,1,1896.79,655.806,176.647,5.49483,0,0,0.384049,-0.923313,300,0,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(20664,193212,604,3,1,1896.79,655.806,176.647,5.49483,0,0,0.384049,-0.923313,300,0,1),
 (9760,191844,571,1,1,8558.69,-286.853,704.254,2.14675,0,0,0.878816,0.477161,120,100,1),
 (23009,186632,571,1,1,1512.93,-3499.75,57.7753,-1.18682,0,0,-0.559191,0.829039,120,100,1),
 (23010,186632,571,1,1,1480.03,-3432.66,88.073,-0.261798,0,0,-0.130525,0.991445,120,100,1),
@@ -58409,7 +58427,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (79113,189981,571,1,65535,6488.85,4302.35,-42.0004,4.62439,0,0,0.737525,-0.67532,1800,100,1),
 (79114,189981,571,1,65535,5331.68,4300.26,-147.331,4.63696,0,0,0.733266,-0.679942,1800,100,1),
 (79115,189981,571,1,65535,6497.57,4297.99,-41.4683,4.63696,0,0,0.733266,-0.679942,1800,100,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (79116,189981,571,1,65535,6279.75,4223.94,-41.5134,4.63696,0,0,0.733266,-0.679942,1800,100,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(79116,189981,571,1,65535,6279.75,4223.94,-41.5134,4.63696,0,0,0.733266,-0.679942,1800,100,1),
 (79117,189981,571,1,65535,5130.38,4218.63,-83.5345,5.39722,0,0,0.428636,-0.903477,1800,100,1),
 (79118,189981,571,1,65535,5481.11,4197.8,-96.66,5.39722,0,0,0.428636,-0.903477,1800,100,1),
 (79119,189981,571,1,65535,5230.01,4197.31,-93.6224,3.09443,0,0,0.999722,0.0235792,1800,100,1),
@@ -70389,7 +70408,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (84352,1734,0,1,65535,1227.13,-997,99.956,1.065,0,0,0.507689,0.861541,1200,100,1),
 (84351,2047,0,1,65535,-11346,-962,33.115,0.925,0,0,0.446187,0.89494,600,100,1),
 (84350,1735,0,1,65535,-11346,-962,33.115,0.925,0,0,0.446187,0.89494,600,100,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (84349,1734,0,1,65535,-11346,-962,33.115,0.925,0,0,0.446187,0.89494,1200,100,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(84349,1734,0,1,65535,-11346,-962,33.115,0.925,0,0,0.446187,0.89494,1200,100,1),
 (84348,2047,1,1,65535,4003.79,-5018.2,144.055,6.18437,0,0,0.0493875,-0.99878,600,100,1),
 (84347,1735,1,1,65535,4003.79,-5018.2,144.055,6.18437,0,0,0.0493875,-0.99878,600,100,1),
 (84346,1734,1,1,65535,4003.79,-5018.2,144.055,6.18437,0,0,0.0493875,-0.99878,1200,100,1),
@@ -82724,7 +82744,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (160903,203888,0,1,1,-8714.58,724.061,98.0228,0,0,0,0.309016,0.951057,300,255,1),
 (160904,203890,0,1,1,-8714.63,723.929,98.4299,0,0,0,0.892979,0.450099,300,255,1),
 (160905,203892,0,1,1,-8706.21,869.366,97.9031,0,0,0,0.304864,0.952396,300,255,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (160906,205492,0,1,1,-8377.9,612.363,101.424,0,0,0,0.900698,0.434446,300,255,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(160906,205492,0,1,1,-8377.9,612.363,101.424,0,0,0,0.900698,0.434446,300,255,1),
 (160907,203895,0,1,1,-8706.1,869.227,97.7967,0,0,0,-0.949698,0.313166,300,255,1),
 (160908,203874,0,1,1,-8579.44,531.557,101.976,0,0,0,-0.956305,0.292372,300,255,1),
 (160909,203885,0,1,1,-8733.79,707.878,98.9994,0,0,0,0.898793,0.438373,300,255,1),
@@ -95900,7 +95921,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (174133,152576,1,1,1,-4446.4,2055.31,46.2764,0,0,0,0.199367,0.979925,300,255,1),
 (174134,142187,1,1,1,-2803.89,2666.9,73.4469,0,0,0,-1,0,300,100,1),
 (174135,152578,1,1,1,-4446.41,2055.24,45.6197,0,0,0,0.833885,0.551938,300,255,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (174136,142073,1,1,1,-3131.03,2255.4,39.7844,0,0.0110626,-0.0111837,-0.981527,0.190674,300,255,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(174136,142073,1,1,1,-3131.03,2255.4,39.7844,0,0.0110626,-0.0111837,-0.981527,0.190674,300,255,1),
 (174137,152579,1,1,1,-4446.38,2055.25,44.954,0,0,0,0.833885,0.551938,300,255,1),
 (174138,202085,1,1,1,-3089.6,2578.3,50.1679,0,0,0,-0.969231,0.246154,300,255,1),
 (174139,202213,1,1,1,-3045.39,2214.66,41.993,0,0,0,0.979045,0.203644,300,255,1),
@@ -109074,7 +109096,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (187331,2045,1,1,65535,-6390.71,-3745.56,-58.7499,0,0,0,0,1,600,100,1),
 (187332,2045,1,1,65535,-6094.25,-3799.3,-58.7501,0,0,0,0,1,600,100,1),
 (187333,2045,1,1,65535,-5582.78,-3760.14,-58.75,0,0,0,0,1,600,100,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (187334,2045,1,1,65535,-6597.05,-3836.9,-58.75,0,0,0,0,1,600,100,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(187334,2045,1,1,65535,-6597.05,-3836.9,-58.75,0,0,0,0,1,600,100,1),
 (187335,2040,1,1,65535,-6656.59,-3821.86,-52.0631,0,0,0,0,1,600,100,1),
 (187336,1735,1,1,65535,-6612.14,-3926.26,-52.5373,0,0,0,0,1,600,100,1),
 (187337,2045,1,1,65535,-5828.09,-3864.7,-88.0134,0,0,0,0,1,600,100,1),
@@ -120697,7 +120720,8 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `positi
 (212595,113769,530,1,65535,-4208.51,-12519.4,45.9264,5.09636,0,0,-0.559193,0.829038,300,100,1),
 (212596,113770,530,1,65535,-4214.66,-12509.2,45.6206,4.92183,0,0,-0.62932,0.777146,300,100,1),
 (212597,113769,530,1,65535,-4226.51,-12461.1,46.8915,2.09439,0,0,0.866025,0.500001,300,100,1);
-INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (212598,113768,530,1,65535,-4149.32,-12451,44.2281,6.16101,0,0,-0.0610485,0.998135,300,100,1),
+INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
+(212598,113768,530,1,65535,-4149.32,-12451,44.2281,6.16101,0,0,-0.0610485,0.998135,300,100,1),
 (212599,113771,530,1,65535,-4159.73,-12451.7,47.1973,3.54302,0,0,-0.979924,0.19937,300,100,1),
 (212600,113770,530,1,65535,-4144.6,-12490.2,44.6027,4.69494,0,0,-0.71325,0.70091,300,100,1),
 (212601,194047,530,1,65535,-4144.6,-12490.2,44.6027,4.69494,0,0,-0.71325,0.70091,300,255,1),
@@ -127433,4 +127457,3 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-24 21:53:45
