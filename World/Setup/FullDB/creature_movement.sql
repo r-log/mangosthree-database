@@ -1,27 +1,19 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `creature_movement`; 
+-- ---------------------------------------- 
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2016 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2016 MaNGOSZero <https://github.com/mangosthree>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: localhost    Database: m3
+-- ------------------------------------------------------
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -29,41 +21,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `creature_movement`
---
-
-DROP TABLE IF EXISTS `creature_movement`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `creature_movement` (
-  `id` int(10) unsigned NOT NULL COMMENT 'Creature GUID',
-  `point` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `position_x` float NOT NULL DEFAULT '0',
-  `position_y` float NOT NULL DEFAULT '0',
-  `position_z` float NOT NULL DEFAULT '0',
-  `waittime` int(10) unsigned NOT NULL DEFAULT '0',
-  `script_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `textid1` int(11) NOT NULL DEFAULT '0',
-  `textid2` int(11) NOT NULL DEFAULT '0',
-  `textid3` int(11) NOT NULL DEFAULT '0',
-  `textid4` int(11) NOT NULL DEFAULT '0',
-  `textid5` int(11) NOT NULL DEFAULT '0',
-  `emote` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `spell` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `orientation` float NOT NULL DEFAULT '0',
-  `model1` mediumint(9) NOT NULL DEFAULT '0',
-  `model2` mediumint(9) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`,`point`)
-) ENGINE=MyISAM AUTO_INCREMENT=4455453 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Creature System';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `creature_movement`
 --
 
 LOCK TABLES `creature_movement` WRITE;
 /*!40000 ALTER TABLE `creature_movement` DISABLE KEYS */;
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (83309,4,1636.63,8506.09,-7.37743,0,0,0,0,0,0,0,0,0,2.5525,0,0),
 (83309,2,1670.9,8499.21,-7.93905,0,0,0,0,0,0,0,0,0,3.48791,0,0),
 (83309,1,1681.44,8486.82,-8.04557,0,0,0,0,0,0,0,0,0,2.15902,0,0),
@@ -16367,7 +16330,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (77286,61,881.885,-5703.19,231.845,0,0,0,0,0,0,0,0,0,5.93911,0,0),
 (77286,62,895.503,-5706.44,231.163,0,0,0,0,0,0,0,0,0,6.053,0,0),
 (77286,63,906.749,-5710.94,231.161,0,0,0,0,0,0,0,0,0,5.91555,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (77286,64,920.853,-5714.1,228.488,0,0,0,0,0,0,0,0,0,6.07263,0,0),
 (77286,65,933.877,-5714.39,228.458,0,0,0,0,0,0,0,0,0,6.26505,0,0),
 (77286,66,950.11,-5710.2,227.974,0,0,0,0,0,0,0,0,0,0.252826,0,0),
@@ -33298,7 +33261,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (169359,2,-4671.61,-1650.73,503.699,0,0,0,0,0,0,0,0,0,0,0,0),
 (169359,3,-4698.26,-1650.24,503.574,0,0,0,0,0,0,0,0,0,0,0,0),
 (169359,4,-4698.26,-1650.24,503.574,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (170517,1,-10049.1,-1428.96,29.9349,0,0,0,0,0,0,0,0,0,0,0,0),
 (170517,2,-10050.1,-1429.06,29.9349,0,0,0,0,0,0,0,0,0,0,0,0),
 (170517,3,-10053,-1429.36,29.5599,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -50391,7 +50354,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (195499,6,1742.06,-4352.16,47.1372,0,0,0,0,0,0,0,0,0,0,0,0),
 (195499,7,1739.84,-4336.85,53.7327,0,0,0,0,0,0,0,0,0,0,0,0),
 (195499,8,1735.11,-4325.69,58.4417,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (195499,9,1729.2,-4315.78,61.8156,0,0,0,0,0,0,0,0,0,0,0,0),
 (195499,10,1725.07,-4309.88,62.4319,0,0,0,0,0,0,0,0,0,0,0,0),
 (195499,11,1725.07,-4309.88,62.4319,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -67298,7 +67261,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (208508,6,-5772.03,4113.98,-228.74,0,0,0,0,0,0,0,0,0,0,0,0),
 (208508,7,-5850.95,4148.1,-274.546,0,0,0,0,0,0,0,0,0,0,0,0),
 (208508,8,-5863.94,4158.67,-311.74,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (208508,9,-5863.94,4158.67,-311.74,0,0,0,0,0,0,0,0,0,0,0,0),
 (208509,1,-5586.52,4052.95,-183.667,0,0,0,0,0,0,0,0,0,0,0,0),
 (208509,2,-5587.5,4052.72,-183.667,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -84423,7 +84386,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (228691,4,1128.87,1905.31,302.002,0,0,0,0,0,0,0,0,0,0,0,0),
 (228691,5,1128.07,1905.41,301.877,0,0,0,0,0,0,0,0,0,0,0,0),
 (228691,6,1120.57,1910.68,301.627,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (228691,7,1120.57,1910.68,301.627,0,0,0,0,0,0,0,0,0,0,0,0),
 (228692,1,1137.26,1835.59,302.364,0,0,0,0,0,0,0,0,0,0,0,0),
 (228692,2,1136.27,1835.75,302.364,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -101789,7 +101752,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (239199,1,2262.76,-1123.12,92.544,0,0,0,0,0,0,0,0,0,0,0,0),
 (239199,2,2261.8,-1122.83,92.544,0,0,0,0,0,0,0,0,0,0,0,0),
 (239199,3,2275.96,-1121.57,92.3158,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (239199,4,2275.96,-1121.57,92.3158,0,0,0,0,0,0,0,0,0,0,0,0),
 (240301,1,2204.32,-1239.85,84.3691,0,0,0,0,0,0,0,0,0,0,0,0),
 (240301,2,2203.74,-1239.03,84.3691,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -118919,7 +118882,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (265115,3,-1252.36,-4014.3,-17.7341,0,0,0,0,0,0,0,0,0,0,0,0),
 (265115,4,-1256.34,-4013.88,-17.1091,0,0,0,0,0,0,0,0,0,0,0,0),
 (265115,5,-1260.32,-4013.46,-15.8591,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (265115,6,-1262.31,-4013.25,-15.2341,0,0,0,0,0,0,0,0,0,0,0,0),
 (265115,7,-1263.19,-4013.16,-14.8591,0,0,0,0,0,0,0,0,0,0,0,0),
 (265115,8,-1263.19,-4013.16,-14.8591,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -136030,7 +135993,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (285005,2,4942.61,-1490.2,1329.39,0,0,0,0,0,0,0,0,0,0,0,0),
 (285005,3,4951.66,-1482.32,1328.76,0,0,0,0,0,0,0,0,0,0,0,0),
 (285005,4,4955.77,-1478.74,1328.39,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (285005,5,4955.77,-1478.74,1328.39,0,0,0,0,0,0,0,0,0,0,0,0),
 (284759,1,5015.96,-1567.33,1330.63,0,0,0,0,0,0,0,0,0,0,0,0),
 (284759,2,5016.67,-1566.62,1330.63,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -153182,7 +153145,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (300194,4,4744.82,-2422.11,681.03,0,0,0,0,0,0,0,0,0,0,0,0),
 (300195,1,4636.56,-2499.8,874.392,0,0,0,0,0,0,0,0,0,0,0,0),
 (300195,2,4636.18,-2498.87,874.392,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (300195,3,4636.18,-2498.87,681.018,0,0,0,0,0,0,0,0,0,0,0,0),
 (300195,4,4636.18,-2498.87,681.018,0,0,0,0,0,0,0,0,0,0,0,0),
 (300196,1,4737.07,-2503.34,875.774,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -170336,7 +170299,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (317625,11,-14316.3,521.731,-0.09242,0,0,0,0,0,0,0,0,0,0,0,0),
 (317633,1,-14029.1,850.948,0.15265,0,0,0,0,0,0,0,0,0,0,0,0),
 (317633,2,-14030,850.479,0.15265,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (317633,3,-14041.1,846.174,-0.04443,0,0,0,0,0,0,0,0,0,0,0,0),
 (317633,4,-14101.6,798.778,-0.04443,0,0,0,0,0,0,0,0,0,0,0,0),
 (317633,5,-14223.8,794.67,-0.04443,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -187483,7 +187446,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (340183,4,2878.82,43.5543,1.55171,0,0,0,0,0,0,0,0,0,0,0,0),
 (340184,1,2881.38,88.3487,1.33465,0,0,0,0,0,0,0,0,0,0,0,0),
 (340184,2,2881.64,87.3828,1.33465,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (340184,3,2885.54,86.5156,1.95965,0,0,0,0,0,0,0,0,0,0,0,0),
 (340184,4,2886.21,86.3628,1.87811,0,0,0,0,0,0,0,0,0,0,0,0),
 (340184,5,2886.21,86.3628,1.87811,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -204661,7 +204624,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (360806,5,9505.21,-6843.23,16.6175,0,0,0,0,0,0,0,0,0,0,0,0),
 (360806,6,9504.71,-6842.56,17.9325,0,0,0,0,0,0,0,0,0,0,0,0),
 (360806,7,9504.71,-6842.56,17.9325,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (360801,1,9491.37,-6790.42,16.6113,0,0,0,0,0,0,0,0,0,0,0,0),
 (360801,2,9490.92,-6791.31,16.6113,0,0,0,0,0,0,0,0,0,0,0,0),
 (360801,3,9481.32,-6802.19,16.5757,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -221799,7 +221762,7 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (369120,1,-4211.31,-12508.6,45.7427,0,0,0,0,0,0,0,0,0,0,0,0),
 (369120,2,-4211.98,-12507.8,45.7427,0,0,0,0,0,0,0,0,0,0,0,0),
 (369120,3,-4207.69,-12510.4,45.1177,0,0,0,0,0,0,0,0,0,0,0,0);
-INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES
+INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) VALUES 
 (369120,4,-4204.17,-12512.5,44.9927,0,0,0,0,0,0,0,0,0,0,0,0),
 (369120,5,-4204.17,-12512.5,44.9927,0,0,0,0,0,0,0,0,0,0,0,0),
 (369121,1,-4211.31,-12507.5,45.6177,0,0,0,0,0,0,0,0,0,0,0,0),
@@ -224309,3 +224272,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2016-09-13  1:04:35

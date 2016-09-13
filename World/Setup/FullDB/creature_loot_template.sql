@@ -1,27 +1,19 @@
+-- ---------------------------------------- 
+-- --        CLEAR DOWN THE TABLE        -- 
+-- ---------------------------------------- 
+TRUNCATE TABLE `creature_loot_template`; 
+-- ---------------------------------------- 
+-- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Copyright (C) 2005-2016 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2016 MaNGOSZero <https://github.com/mangosthree>
---
--- This program is free software; you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
--- the Free Software Foundation; either version 2 of the License, or
--- (at your option) any later version.
---
--- This program is distributed in the hope that it will be useful,
--- but WITHOUT ANY WARRANTY; without even the implied warranty of
--- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
---
--- You should have received a copy of the GNU General Public License
--- along with this program; if not, write to the Free Software
--- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
---
+-- Host: localhost    Database: m3
+-- ------------------------------------------------------
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -29,31 +21,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `creature_loot_template`
---
-
-DROP TABLE IF EXISTS `creature_loot_template`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `creature_loot_template` (
-  `entry` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'entry 0 used for player insignia loot',
-  `item` mediumint(8) NOT NULL DEFAULT '0',
-  `ChanceOrQuestChance` float NOT NULL DEFAULT '100',
-  `groupid` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `mincountOrRef` mediumint(9) NOT NULL DEFAULT '1',
-  `maxcount` smallint(5) unsigned NOT NULL DEFAULT '1',
-  `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`entry`,`item`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Loot System';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `creature_loot_template`
 --
 
 LOCK TABLES `creature_loot_template` WRITE;
 /*!40000 ALTER TABLE `creature_loot_template` DISABLE KEYS */;
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (3,2592,25.0412,0,1,2,0),
 (3,1129,-25,0,1,1,0),
 (3,2589,14.45,0,1,3,0),
@@ -37835,7 +37808,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (10813,14512,6.449,0,1,1,0),
 (10813,13520,3.2245,0,1,1,0),
 (10813,8948,2.884,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (10813,14256,2.5436,0,1,1,0),
 (10813,13353,2.0228,0,1,1,0),
 (10813,8766,1.462,0,1,1,0),
@@ -73199,7 +73172,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (19990,24776,0.0151,0,1,1,0),
 (19990,25005,0.0132,0,1,1,0),
 (19990,25068,0.0132,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (19990,24665,0.0132,0,1,1,0),
 (19990,24667,0.0132,0,1,1,0),
 (19990,24779,0.0113,0,1,1,0),
@@ -108221,7 +108194,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (11787,7975,1.0795,0,-7975,1,0),
 (11786,7975,0.3202,0,-7975,1,0),
 (11785,7975,0.1135,0,-7975,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (11784,7975,0.0678,0,-7975,1,0),
 (11783,7975,0.038,0,-7975,1,0),
 (11782,7975,0.5508,0,-7975,1,0),
@@ -141801,7 +141774,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (21453,31318,0.0045,0,-31318,1,0),
 (21450,31318,0.0039,0,-31318,1,0),
 (21350,31318,0.1097,0,-31318,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (21339,31318,0.1202,0,-31318,1,0),
 (21301,31318,0.0363,0,-31318,1,0),
 (21298,31318,0.0719,0,-31318,1,0),
@@ -176631,7 +176604,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (17455,25158,0.007,0,1,1,0),
 (18138,24589,0.65,0,-24589,1,0),
 (17455,25242,0.007,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (17455,25268,0.007,0,1,1,0),
 (17455,25278,0.007,0,1,1,0),
 (17464,25397,10,0,-25397,1,0),
@@ -210724,7 +210697,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (32997,4294,0.0088,0,1,1,0),
 (32997,4575,0.247,0,1,1,0),
 (32997,5115,26.6914,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (32997,5212,0.05,0,1,1,0),
 (32997,5469,39.4196,0,1,1,0),
 (32997,6271,0.0265,0,1,1,0),
@@ -247172,7 +247145,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (39354,4680,0.0541,0,1,1,0),
 (39354,4686,0.1622,0,1,1,0),
 (39354,4692,0.1653,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (39354,5069,0.2576,0,1,1,0),
 (39354,5571,0.1685,0,1,1,0),
 (39354,5572,0.283,0,1,1,0),
@@ -283018,7 +282991,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (41569,55381,0.0177,0,1,1,0),
 (41569,55382,0.0128,0,1,1,0),
 (41569,55389,0.0092,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (41569,55390,0.0024,0,1,1,0),
 (41569,55391,0.0061,0,1,1,0),
 (41569,55398,0.0354,0,1,1,0),
@@ -318997,7 +318970,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (44315,4065,0.0223,0,1,1,0),
 (44315,4066,0.0205,0,1,1,0),
 (44315,4074,0.0074,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (44315,4075,0.0298,0,1,1,0),
 (44315,4076,0.0223,0,1,1,0),
 (44315,4077,0.0223,0,1,1,0),
@@ -355334,7 +355307,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (46378,55576,0.05,0,1,1,0),
 (46378,55584,0.05,0,1,1,0),
 (46378,55585,0.05,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (46378,55592,0.05,0,1,1,0),
 (46378,55594,0.05,0,1,1,0),
 (46378,55601,0.05,0,1,1,0),
@@ -391630,7 +391603,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (48257,66931,0.0218,0,1,1,0),
 (48257,66971,0.0328,0,1,1,0),
 (48257,67059,0.0218,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (48257,67069,0.0109,0,1,1,0),
 (48257,67539,0.05,0,1,1,0),
 (48257,68197,8.6036,0,1,1,0),
@@ -427300,7 +427273,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (45922,55305,0.0103,0,1,1,0),
 (42691,55305,0.0071,0,1,1,0),
 (39987,55305,0.0128,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (40017,55305,0.0091,0,1,1,0),
 (40935,55305,0.0069,0,1,1,0),
 (48811,55585,0.1103,0,1,1,0),
@@ -462392,7 +462365,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (49817,60210,1.1047,0,1,1,0),
 (45700,60210,1.5821,0,1,1,0),
 (45699,60210,1.8828,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (47150,60210,1.1372,0,1,1,0),
 (49821,60210,0.9071,0,1,1,0),
 (45267,60210,0.468,0,1,1,0),
@@ -497462,7 +497435,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (37062,14086,0.2669,0,1,1,0),
 (37062,14089,0.0381,0,1,1,0),
 (37062,14094,0.0381,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (37062,15015,0.1525,0,1,1,0),
 (37062,15298,0.0381,0,1,1,0),
 (37062,15473,0.305,0,1,1,0),
@@ -532870,7 +532843,7 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `g
 (51659,9892,0.0487,0,1,1,0),
 (51659,9893,0.0365,0,1,1,0),
 (51659,9894,0.0517,0,1,1,0);
-INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES
+INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `condition_id`) VALUES 
 (51659,9895,0.0304,0,1,1,0),
 (51659,9896,0.1125,0,1,1,0),
 (51659,9897,0.0243,0,1,1,0),
@@ -559981,3 +559954,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+-- Dump completed on 2016-09-13  1:04:33
