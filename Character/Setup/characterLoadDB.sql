@@ -102090,6 +102090,30 @@ LOCK TABLES `petition_sign` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `pvpstats_players`
+--
+DROP TABLE IF EXISTS `pvpstats_players`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pvpstats_players` (
+  `battleground_id` BIGINT(20) UNSIGNED NOT NULL,
+  `player_guid` INT(10) UNSIGNED NOT NULL,
+  `score_killing_blows` MEDIUMINT(8) UNSIGNED NOT NULL,
+  `score_deaths` MEDIUMINT(8) UNSIGNED NOT NULL,
+  `score_honorable_kills` MEDIUMINT(8) UNSIGNED NOT NULL,
+  `score_bonus_honor` MEDIUMINT(8) UNSIGNED NOT NULL,
+  `score_damage_done` MEDIUMINT(8) UNSIGNED NOT NULL,
+  `score_healing_done` MEDIUMINT(8) UNSIGNED NOT NULL,
+  `attr_1` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `attr_2` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `attr_3` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `attr_4` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `attr_5` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  PRIMARY KEY (`battleground_id`,`player_guid`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `saved_variables`
 --
 
