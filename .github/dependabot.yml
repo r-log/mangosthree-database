@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+  - package-ecosystem: docker
+    directory: /docker
+    schedule:
+      interval: weekly
+    # The database image moves only by hand (a new MariaDB LTS is a deliberate decision).
+    ignore:
+      - dependency-name: mariadb

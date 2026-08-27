@@ -1,1 +1,7 @@
 MaNGOS3_Cata_Rev_3/MaNGOS3_Cata_Rev_3.sql filter=lfs diff=lfs merge=lfs -text
+
+# Scripts and workflow files are consumed by Linux tools even from a Windows checkout
+* text=auto
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
