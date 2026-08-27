@@ -1,0 +1,54 @@
+name: Install check
+
+# Installs the three databases from scratch into MariaDB 10.11 exactly the way a user
+# would (setup, full world content, every update in order) and verifies the end state,
+# so a broken migration or a MySQL-only statement fails the pull request, not a server.
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: install-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  install:
+    name: Fresh install on MariaDB 10.11
+    runs-on: ubuntu-latest
+
+    services:
+      db:
+        image: mariadb:10.11
+        env:
+          MARIADB_ROOT_PASSWORD: mangos
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd "healthcheck.sh --connect --innodb_initialized"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 12
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          submodules: recursive
+          fetch-depth: 1
+
+      - name: Install MariaDB client
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq mariadb-client
+
+      - name: Install databases
+        run: .github/apps/ci/install-databases.sh -h 127.0.0.1 -P 3306 -u root -p mangos
+
+      - name: Verify the installed state
+        run: .github/apps/ci/verify-databases.sh -h 127.0.0.1 -P 3306 -u root -p mangos
