@@ -103,10 +103,22 @@ check_absent_index() {   # check_absent_index <db> <LIKE pattern on the index na
         fail "$1 still has $n index(es) like $2"
     fi
 }
+check_rows_where() {   # check_rows_where <db> <table> <where> <expected-count>
+    local n
+    n=$(query "$1" "SELECT COUNT(*) FROM \`$2\` WHERE $3")
+    if [ "$n" -eq "$4" ]; then
+        echo "ok   $1.$2 has $n row(s) where $3"
+    else
+        fail "$1.$2 has $n row(s) where $3, expected $4"
+    fi
+}
+
 check_absent_tables character3 'ai_playerbot%'
 check_absent_tables character3 'ahbot_%'
 check_absent_index mangos3 'idx_%_loot_template_item'
 check_absent_column realmd account playerBot
+check_rows_where mangos3 mangos_string "entry IN (61, 62, 1015)" 0
+check_rows_where mangos3 mangos_string "entry = 1029 AND content_default = 'This command needs a logged-in account and cannot be used from the server console.' AND source_enum_tag = 'LANG_COMMAND_NEEDS_ACCOUNT' AND COALESCE(content_loc1, content_loc2, content_loc3, content_loc4, content_loc5, content_loc6, content_loc7, content_loc8, content_loc9, content_loc10, content_loc11) IS NULL" 1
 
 if [ $failures -gt 0 ]; then
     echo "$failures check(s) failed"

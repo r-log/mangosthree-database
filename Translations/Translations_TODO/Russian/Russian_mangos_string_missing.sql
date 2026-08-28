@@ -42,6 +42,7 @@ UPDATE `trans_words` SET `content_loc8`='%u - |cffffffff|Hpool:%u|h[%s]|h|r Auto
 UPDATE `trans_words` SET `content_loc8`='%u - |cffffffff|Hpool:%u|h[%s]|h|r AutoSpawn: %u MaxLimit: %u Creatures: %u GameObjecs: %u Pools %u' WHERE `word_id` = 4444; -- mangos_string - content : entry=376
 UPDATE `trans_words` SET `content_loc8`='[Trigger %u] Map %u X:%f Y:%f Z:%f%s%s' WHERE `word_id` = 4435; -- mangos_string - content : entry=362
 UPDATE `trans_words` SET `content_loc8`='[usable]' WHERE `word_id` = 4823; -- mangos_string - content : entry=1152
+UPDATE `trans_words` SET `content_loc8`='This command needs a logged-in account and cannot be used from the server console.' WHERE `word_id` = 4782; -- mangos_string - content : entry=1029
 UPDATE `trans_words` SET `content_loc8`='|cffff0000[Arena Queue Announcer]:|r All Arenas -- Exited : %ux%u : %u|r' WHERE `word_id` = 5099; -- mangos_string - content : entry=719
 UPDATE `trans_words` SET `content_loc8`='|cffff0000[Arena Queue Announcer]:|r All Arenas -- Joined : %ux%u : %u|r' WHERE `word_id` = 5009; -- mangos_string - content : entry=718
 UPDATE `trans_words` SET `content_loc8`='|cffff0000[Server Announce]:|r%s' WHERE `word_id` = 4949; -- mangos_string - content : entry=1800

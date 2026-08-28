@@ -92,7 +92,6 @@ UPDATE `mangos_string` SET `content_loc11`='Inizia' WHERE `entry`=815;
 UPDATE `mangos_string` SET `content_loc11`='Il tuo corpo è troppo esausto per viaggiare nel Regno Spettrale.' WHERE `entry`=816;
 UPDATE `mangos_string` SET `content_loc11`='Esci dal daemon ...' WHERE `entry`=1000;
 UPDATE `mangos_string` SET `content_loc11`='- [Account] [Carattere] [IP] [Mappa] [Zona] [Exp] [GMLev] -' WHERE `entry`=1010;
-UPDATE `mangos_string` SET `content_loc11`='- ======================== Caratteri online ================= ====== -' WHERE `entry`=1015;
 UPDATE `mangos_string` SET `content_loc11`='   Segui giocatore %s (lowguid %u)' WHERE `entry`=1132;
 UPDATE `mangos_string` SET `content_loc11`='   Segui creatura %s (lowguid %u)' WHERE `entry`=1133;
 UPDATE `mangos_string` SET `content_loc11`='Segui <NULL>' WHERE `entry`=1134;

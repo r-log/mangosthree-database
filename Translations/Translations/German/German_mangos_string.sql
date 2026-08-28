@@ -97,7 +97,6 @@ UPDATE `mangos_string` SET `content_loc3`='Initiiere' WHERE `entry`=815;
 UPDATE `mangos_string` SET `content_loc3`='Achtung: Ihr seid in eine Flugverbotszone eingedrungen und$Bwerdet demnächst zum Absteigen gezwungen werden!' WHERE `entry`=816;
 UPDATE `mangos_string` SET `content_loc3`='Achtung: Ihr seid in eine Flugverbotszone eingedrungen und$Bwerdet demnächst zum Absteigen gezwungen werden!' WHERE `entry`=817;
 UPDATE `mangos_string` SET `content_loc3`='- [Konto] [Zeichen] [IP] [Karte] [Zone] [Exp] [GMLev] -' WHERE `entry`=1010;
-UPDATE `mangos_string` SET `content_loc3`='- ======================== Charaktere online ==================== ====== -' WHERE `entry`=1015;
 UPDATE `mangos_string` SET `content_loc3`='[verwendbar]' WHERE `entry`=1152;
 UPDATE `mangos_string` SET `content_loc3`='Kriterien:' WHERE `entry`=1161;
 UPDATE `mangos_string` SET `content_loc3`='Zählen' WHERE `entry`=1164;

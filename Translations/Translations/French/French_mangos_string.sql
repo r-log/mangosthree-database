@@ -212,7 +212,6 @@ UPDATE `mangos_string` SET `content_loc2`='Initier' WHERE `entry`=815;
 UPDATE `mangos_string` SET `content_loc2`='Alerte : vous venez de pénétrer dans une zone de survol interdit. Vous allez être $Gdésarçonné:désarçonnée; !' WHERE `entry`=816;
 UPDATE `mangos_string` SET `content_loc2`='Alerte : vous venez de pénétrer dans une zone de survol interdit. Vous allez être $Gdésarçonné:désarçonnée; !' WHERE `entry`=817;
 UPDATE `mangos_string` SET `content_loc2`='- [Compte] [Caractère] [IP] [Carte] [Zone] [Exp] [GMLev] -' WHERE `entry`=1010;
-UPDATE `mangos_string` SET `content_loc2`='- ======================= Personnages en ligne ================= ====== -' WHERE `entry`=1015;
 UPDATE `mangos_string` SET `content_loc2`='%d - propriétaire:%s (guid: compte%u:%u)%s' WHERE `entry`=1103;
 UPDATE `mangos_string` SET `content_loc2`='%d - propriétaire:%s (guid: compte%u:%u)%s' WHERE `entry`=1104;
 UPDATE `mangos_string` SET `content_loc2`='%d - propriétaire:%s (guid: compte%u:%u)%s' WHERE `entry`=1105;

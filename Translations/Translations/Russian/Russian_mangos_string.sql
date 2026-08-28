@@ -58,8 +58,6 @@ UPDATE `mangos_string` SET `content_loc8`='Текущее сообщение д�
 UPDATE `mangos_string` SET `content_loc8`='Используемая База Данных: %s' WHERE `entry`=57;
 UPDATE `mangos_string` SET `content_loc8`='Используемая библиотека скриптов: %s' WHERE `entry`=58;
 UPDATE `mangos_string` SET `content_loc8`='Используемое существом EventAI: %s' WHERE `entry`=59;
-UPDATE `mangos_string` SET `content_loc8`='Имя пользователя:' WHERE `entry`=61;
-UPDATE `mangos_string` SET `content_loc8`='Пароль:' WHERE `entry`=62;
 UPDATE `mangos_string` SET `content_loc8`='Сообщения принимаются' WHERE `entry`=63;
 UPDATE `mangos_string` SET `content_loc8`='Сообщения отклоняются' WHERE `entry`=64;
 UPDATE `mangos_string` SET `content_loc8`='Используемая библиотека скриптов: <Неизвестная библиотека скриптов>' WHERE `entry`=65;
@@ -618,7 +616,6 @@ UPDATE `mangos_string` SET `content_loc8`='Аккаунт %s не создан (
 UPDATE `mangos_string` SET `content_loc8`='Игрок %s (GUID: %u) Аккаунт %s (ID: %u) удалён.' WHERE `entry`=1009;
 UPDATE `mangos_string` SET `content_loc8`='| ID         |Учет. запись|      Персонаж| IP       |GM|Дополнение |' WHERE `entry`=1010;
 UPDATE `mangos_string` SET `content_loc8`='Нет игроков онлайн.' WHERE `entry`=1014;
-UPDATE `mangos_string` SET `content_loc8`='Можно или выйти из удаленной консоли администратора или сбросить команду.' WHERE `entry`=1015;
 UPDATE `mangos_string` SET `content_loc8`='| GUID      |Имя                |Аккаунт                     |Дата Удаления         |' WHERE `entry`=1016;
 UPDATE `mangos_string` SET `content_loc8`='Персонажи не найдены.' WHERE `entry`=1019;
 UPDATE `mangos_string` SET `content_loc8`='Восстанавливаем следующих персонажей:' WHERE `entry`=1020;
@@ -630,7 +627,6 @@ UPDATE `mangos_string` SET `content_loc8`='Персонаж \'%s\' (GUID: %u У�
 UPDATE `mangos_string` SET `content_loc8`='GUID: %u Имя: %s Аккаунт: %s (%u) Дата: %s' WHERE `entry`=1026;
 UPDATE `mangos_string` SET `content_loc8`='Режим фильтрации логов:' WHERE `entry`=1027;
 UPDATE `mangos_string` SET `content_loc8`='Все режимы фильтрации установлены на:' WHERE `entry`=1028;
-UPDATE `mangos_string` SET `content_loc8`='Команда может быть вызвана только из удаленной консоли администратора.' WHERE `entry`=1029;
 UPDATE `mangos_string` SET `content_loc8`='Аккаунт %s (Ид: %u) обновил клиент игры до расширения %u.' WHERE `entry`=1100;
 UPDATE `mangos_string` SET `content_loc8`='Сообщение дня изменено на:$B%s' WHERE `entry`=1101;
 UPDATE `mangos_string` SET `content_loc8`='Сообщение отправлено игроку %s: %s' WHERE `entry`=1102;
