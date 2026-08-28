@@ -85,6 +85,15 @@ check_absent_tables() {   # check_absent_tables <db> <LIKE pattern> -- the remov
         fail "$1 still has $n table(s) like $2"
     fi
 }
+check_absent_column() {   # check_absent_column <db> <table> <column>
+    local n
+    n=$(query "$1" "SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = '$1' AND TABLE_NAME = '$2' AND COLUMN_NAME = '$3'")
+    if [ "$n" -eq 0 ]; then
+        echo "ok   $1.$2 has no column $3"
+    else
+        fail "$1.$2 still has column $3"
+    fi
+}
 check_absent_index() {   # check_absent_index <db> <LIKE pattern on the index name>
     local n
     n=$(query "$1" "SELECT COUNT(DISTINCT TABLE_NAME, INDEX_NAME) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA = '$1' AND INDEX_NAME LIKE '$2'")
@@ -97,6 +106,7 @@ check_absent_index() {   # check_absent_index <db> <LIKE pattern on the index na
 check_absent_tables character3 'ai_playerbot%'
 check_absent_tables character3 'ahbot_%'
 check_absent_index mangos3 'idx_%_loot_template_item'
+check_absent_column realmd account playerBot
 
 if [ $failures -gt 0 ]; then
     echo "$failures check(s) failed"
