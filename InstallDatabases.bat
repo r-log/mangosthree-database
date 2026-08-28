@@ -47,7 +47,7 @@ if /i not "%skipPrintOS%"=="YES" call :PrintOS
 
 REM -- Sanity checks before anything is touched ---------------------------------
 if exist "Realm" goto :HaveRepo
-call :Abort "The repository was cloned without the --recursive flag"
+call :Abort "The Realm directory is missing: the checkout is incomplete"
 goto :TheEnd
 
 :HaveRepo
