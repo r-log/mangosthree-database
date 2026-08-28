@@ -76,6 +76,28 @@ if [ $populate = 1 ]; then
     check_rows mangos3 item_template 1000
 fi
 
+check_absent_tables() {   # check_absent_tables <db> <LIKE pattern> -- the removed playerbots objects must not come back
+    local n
+    n=$(query "$1" "SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = '$1' AND TABLE_NAME LIKE '$2'")
+    if [ "$n" -eq 0 ]; then
+        echo "ok   $1 has no table like $2"
+    else
+        fail "$1 still has $n table(s) like $2"
+    fi
+}
+check_absent_index() {   # check_absent_index <db> <LIKE pattern on the index name>
+    local n
+    n=$(query "$1" "SELECT COUNT(DISTINCT TABLE_NAME, INDEX_NAME) FROM information_schema.STATISTICS WHERE TABLE_SCHEMA = '$1' AND INDEX_NAME LIKE '$2'")
+    if [ "$n" -eq 0 ]; then
+        echo "ok   $1 has no index like $2"
+    else
+        fail "$1 still has $n index(es) like $2"
+    fi
+}
+check_absent_tables character3 'ai_playerbot%'
+check_absent_tables character3 'ahbot_%'
+check_absent_index mangos3 'idx_%_loot_template_item'
+
 if [ $failures -gt 0 ]; then
     echo "$failures check(s) failed"
     exit 1
