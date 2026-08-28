@@ -248,7 +248,6 @@ UPDATE `trans_words` SET `content_loc9`='Battlegrounds are set to 1v0 for debugg
 UPDATE `trans_words` SET `content_loc9`='Battlegrounds are set to normal playercount.' WHERE `word_id` = 4706; -- mangos_string - content : entry=740
 UPDATE `trans_words` SET `content_loc9`='Blacksmith' WHERE `word_id` = 4670; -- mangos_string - content : entry=653
 UPDATE `trans_words` SET `content_loc9`='Blue' WHERE `word_id` = 4852; -- mangos_string - content : entry=1186
-UPDATE `trans_words` SET `content_loc9`='Can only quit from a Remote Admin console or the quit command was not entered in full (quit).' WHERE `word_id` = 4768; -- mangos_string - content : entry=1015
 UPDATE `trans_words` SET `content_loc9`='Cannot access %s on map, maybe you are too far away from its spawn location' WHERE `word_id` = 4336; -- mangos_string - content : entry=224
 UPDATE `trans_words` SET `content_loc9`='Cannot add spawn because no free guids for static spawn in reserved guids range. Server restart is required before command can be used. Also look GuidReserveSize.* config options.' WHERE `word_id` = 4907; -- mangos_string - content : entry=1503
 UPDATE `trans_words` SET `content_loc9`='Cannot create item \'%i\' (amount: %i)' WHERE `word_id` = 4557; -- mangos_string - content : entry=497
@@ -271,7 +270,7 @@ UPDATE `trans_words` SET `content_loc9`='Command %s have subcommands:' WHERE `wo
 UPDATE `trans_words` SET `content_loc9`='Command .pinfo doesn\'t support \'rep\' option for offline players.' WHERE `word_id` = 4609; -- mangos_string - content : entry=550
 UPDATE `trans_words` SET `content_loc9`='Command : Additem, itemId = %i, amount = %i' WHERE `word_id` = 4554; -- mangos_string - content : entry=494
 UPDATE `trans_words` SET `content_loc9`='Command : Additemset, itemsetId = %i' WHERE `word_id` = 4555; -- mangos_string - content : entry=495
-UPDATE `trans_words` SET `content_loc9`='Command can only be called from a Remote Admin console.' WHERE `word_id` = 4782; -- mangos_string - content : entry=1029
+UPDATE `trans_words` SET `content_loc9`='This command needs a logged-in account and cannot be used from the server console.' WHERE `word_id` = 4782; -- mangos_string - content : entry=1029
 UPDATE `trans_words` SET `content_loc9`='Commands available to you:' WHERE `word_id` = 4172; -- mangos_string - content : entry=9
 UPDATE `trans_words` SET `content_loc9`='Could not add waypoint %u to %s (pathId %i stored by %s)' WHERE `word_id` = 4330; -- mangos_string - content : entry=230
 UPDATE `trans_words` SET `content_loc9`='Could not create visual waypoint with creatureID: %d' WHERE `word_id` = 4332; -- mangos_string - content : entry=228
@@ -495,7 +494,6 @@ UPDATE `trans_words` SET `content_loc9`='Orange' WHERE `word_id` = 4854; -- mang
 UPDATE `trans_words` SET `content_loc9`='Part of pool %u' WHERE `word_id` = 4816; -- mangos_string - content : entry=1145
 UPDATE `trans_words` SET `content_loc9`='Part of pool %u, top pool %u' WHERE `word_id` = 4817; -- mangos_string - content : entry=1146
 UPDATE `trans_words` SET `content_loc9`='Password not changed (unknown error)!' WHERE `word_id` = 4188; -- mangos_string - content : entry=25
-UPDATE `trans_words` SET `content_loc9`='Password:' WHERE `word_id` = 4224; -- mangos_string - content : entry=62
 UPDATE `trans_words` SET `content_loc9`='Played time: %s Level: %u Money: %s' WHERE `word_id` = 5084; -- mangos_string - content : entry=549
 UPDATE `trans_words` SET `content_loc9`='Player %s (Guid: %u) Account %s (Id: %u) deleted.' WHERE `word_id` = 4763; -- mangos_string - content : entry=1009
 UPDATE `trans_words` SET `content_loc9`='Player %s kicked.' WHERE `word_id` = 4369; -- mangos_string - content : entry=282
@@ -681,7 +679,6 @@ UPDATE `trans_words` SET `content_loc9`='Unknown case \'%s\' for .resetall comma
 UPDATE `trans_words` SET `content_loc9`='Unknown language' WHERE `word_id` = 4744; -- mangos_string - content : entry=805
 UPDATE `trans_words` SET `content_loc9`='UNKNOWN' WHERE `word_id` = 4211; -- mangos_string - content : entry=48
 UPDATE `trans_words` SET `content_loc9`='UNUSED' WHERE `word_id` = 4324; -- mangos_string - content : entry=235
-UPDATE `trans_words` SET `content_loc9`='Username:' WHERE `word_id` = 4223; -- mangos_string - content : entry=61
 UPDATE `trans_words` SET `content_loc9`='Using creature EventAI: %s' WHERE `word_id` = 4222; -- mangos_string - content : entry=59
 UPDATE `trans_words` SET `content_loc9`='Using script library: %s' WHERE `word_id` = 4952; -- mangos_string - content : entry=58
 UPDATE `trans_words` SET `content_loc9`='Using script library: <No Script Library Loaded>' WHERE `word_id` = 4228; -- mangos_string - content : entry=66
