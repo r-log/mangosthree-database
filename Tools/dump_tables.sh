@@ -292,6 +292,7 @@ item_enchantment_template \
 item_expire_convert \
 item_loot_template \
 item_required_target \
+item_sparse \
 item_template \
 locales_achievement_reward \
 locales_command \
