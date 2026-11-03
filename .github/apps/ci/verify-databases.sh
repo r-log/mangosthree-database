@@ -154,7 +154,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 gossip_menu_option "menu_id = 435 AND id = 16 AND option_text = '|cFF0008E8NEW|r: Reforging'" 1
     check_rows_where mangos3 creature_template "CreatureTypeFlags2 <> 0" 36
     check_rows_where mangos3 creature_template "Entry = 10608 AND FemaleName = 'Scarlet Priestess'" 1
-    check_rows_where mangos3 npc_trainer "reqability1 <> 0" 3715
+    check_rows_where mangos3 npc_trainer "reqability1 <> 0" 3714
     check_rows_where mangos3 npc_trainer "spell = 40120 AND reqability1 = 34091 AND reqability2 = 33943" 36
     check_rows_where mangos3 npc_trainer "spell = 97462" 57
     check_rows_where mangos3 npc_trainer "spell = 8895 AND reqability1 = 20222" 36
@@ -173,6 +173,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 creature_template_classlevelstats "Level BETWEEN 1 AND 90" 360
     check_rows_where mangos3 quest_relations "actor = 0 AND entry = 7875 AND role = 1 AND quest IN (25363, 25364, 25366, 25367, 25369)" 5
     check_rows_where mangos3 quest_relations "actor = 0 AND quest IN (495, 10985, 11595, 24912, 26951, 27984)" 12
+    check_rows_where mangos3 npc_trainer "entry = 38243" 3
+    check_rows_where mangos3 npc_trainer "(entry = 911 AND spell IN (772, 3127, 6343, 6673)) OR (entry = 3061 AND spell = 1978) OR (entry IN (987, 3033) AND spell IN (60192, 40123))" 0
 fi
 check_rows_where mangos3 areatrigger_teleport "id IN (2547, 2548, 2549) AND target_map = 0 AND ROUND(target_position_x) = 1399 AND ROUND(target_position_y) = -2575" 3
 
