@@ -133,6 +133,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_text "ID IN (14606, 15258, 16242, 17703, 17705)" 5
     check_rows_where mangos3 gameobject_template "entry = 181247 AND type = 5" 1
     check_rows_where mangos3 gameobject_template "entry = 187559 AND data0 = 1964" 1
+    check_rows_where mangos3 creature_template "Entry IN (46180, 46181, 47581, 47582, 47584, 47586, 47587, 47588, 47589) AND NpcFlags = 1 AND SubName IS NULL" 9
 fi
 
 if [ $failures -gt 0 ]; then
