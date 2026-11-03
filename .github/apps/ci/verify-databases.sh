@@ -172,6 +172,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 creature_template "Expansion >= 0" 40563
     check_rows_where mangos3 creature_template_classlevelstats "Level BETWEEN 1 AND 90" 360
 fi
+check_rows_where mangos3 areatrigger_teleport "id IN (2547, 2548, 2549) AND target_map = 0 AND ROUND(target_position_x) = 1399 AND ROUND(target_position_y) = -2575" 3
 
 if [ $failures -gt 0 ]; then
     echo "$failures check(s) failed"
