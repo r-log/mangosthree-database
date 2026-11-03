@@ -159,6 +159,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_trainer "spell = 8895 AND reqability1 = 20222" 36
     check_rows_where mangos3 npc_trainer "entry = 328 AND spell IN (587, 5504, 42956)" 0
     check_rows_where mangos3 npc_trainer "entry = 1231 AND spell IN (3127, 3044)" 0
+    check_rows_where mangos3 creature_template "Entry = 44125 AND GossipMenuId = 11794" 1
+    check_rows_where mangos3 gossip_menu_option "menu_id = 12677 AND option_id = 8 AND npc_option_npcflag = 65536" 1
 fi
 
 if [ $failures -gt 0 ]; then
