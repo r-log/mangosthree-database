@@ -153,8 +153,10 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 gossip_menu_option "menu_id = 435 AND id = 16 AND option_text = '|cFF0008E8NEW|r: Reforging'" 1
     check_rows_where mangos3 creature_template "CreatureTypeFlags2 <> 0" 36
     check_rows_where mangos3 creature_template "Entry = 10608 AND FemaleName = 'Scarlet Priestess'" 1
-    check_rows_where mangos3 npc_trainer "reqability1 <> 0" 2492
+    check_rows_where mangos3 npc_trainer "reqability1 <> 0" 3715
     check_rows_where mangos3 npc_trainer "spell = 40120 AND reqability1 = 34091 AND reqability2 = 33943" 36
+    check_rows_where mangos3 npc_trainer "spell = 97462" 57
+    check_rows_where mangos3 npc_trainer "spell = 8895 AND reqability1 = 20222" 36
 fi
 
 if [ $failures -gt 0 ]; then
