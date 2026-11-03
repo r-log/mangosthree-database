@@ -134,7 +134,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 gameobject_template "entry = 181247 AND type = 5" 1
     check_rows_where mangos3 gameobject_template "entry = 187559 AND data0 = 1964" 1
     check_rows_where mangos3 creature_template "Entry IN (46180, 46181, 47581, 47582, 47584, 47586, 47587, 47588, 47589) AND NpcFlags = 1 AND SubName IS NULL" 9
-    check_rows_where mangos3 item_enchantment_template "entry BETWEEN -465 AND -456" 95
+    check_rows_where mangos3 item_enchantment_template "entry BETWEEN -465 AND -456" 42
+    check_rows_where mangos3 item_enchantment_template "entry = -457 AND ench BETWEEN 260 AND 264" 5
     check_rows_where mangos3 skill_discovery_template "spellId = 57013" 0
     check_rows_where mangos3 gameobject_template "entry = 181285 AND data3 = 28720" 1
     check_rows_where mangos3 instance_template "(map = 409 AND parent = 230) OR (map = 469 AND parent = 229)" 2
