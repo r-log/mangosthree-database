@@ -150,6 +150,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_trainer "spell = 750 AND spellcost = 0" 0
     check_rows_where mangos3 quest_template "QuestFlags > 16777215" 846
     check_rows_where mangos3 quest_template "MinimapTargetMark <> 0" 393
+    check_rows_where mangos3 gossip_menu_option "menu_id = 435 AND id = 16 AND option_text = '|cFF0008E8NEW|r: Reforging'" 1
 fi
 
 if [ $failures -gt 0 ]; then
