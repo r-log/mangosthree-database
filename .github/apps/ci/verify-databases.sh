@@ -169,6 +169,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_trainer "spell = 53042" 0
     check_rows_where mangos3 npc_trainer "entry = 11146" 245
     check_rows_where mangos3 npc_trainer "entry = 913 AND spell = 674" 0
+    check_rows_where mangos3 creature_template "Expansion >= 0" 40563
+    check_rows_where mangos3 creature_template_classlevelstats "Level BETWEEN 1 AND 90" 360
 fi
 
 if [ $failures -gt 0 ]; then
