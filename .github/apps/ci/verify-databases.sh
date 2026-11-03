@@ -142,6 +142,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 quest_template "entry = 29304 AND RewMoneyMaxLevel = 165400" 1
     check_rows_where mangos3 page_text "entry = 3498 AND text LIKE 'BUR - An aggressively passionate mating call.%'" 1
     check_rows_where mangos3 points_of_interest "entry = 183 AND ROUND(x) = 1739 AND ROUND(y) = -4281" 1
+    check_rows_where mangos3 reputation_spillover_template "faction = 72 AND rank_1 = 4" 1
+    check_rows_where mangos3 player_xp_for_level "lvl = 70 AND xp_for_next_level = 813000" 1
 fi
 
 if [ $failures -gt 0 ]; then
