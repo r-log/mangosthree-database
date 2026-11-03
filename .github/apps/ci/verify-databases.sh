@@ -127,6 +127,8 @@ check_rows_where mangos3 hotfix_data "type = 2442913102" 164
 check_rows_where mangos3 spell_template "id IN (37264, 37278, 37365)" 0
 if [ $populate = 1 ]; then
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
+    check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
+    check_rows_where mangos3 creature_template "IconName = 'Directions'" 208
 fi
 
 if [ $failures -gt 0 ]; then
