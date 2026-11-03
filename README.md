@@ -1,5 +1,7 @@
 [<img src='https://www.getmangos.eu/!assets_mangos/currentlogo.gif' width="48" border=0>][8]
 [<img src='https://www.getmangos.eu/!assets_mangos/logo2.png' border=0>][3]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Build Status:</b>
+ Install: [<img src='https://github.com/r-log/mangosthree-database/actions/workflows/install.yml/badge.svg' border=0 valign="middle">][10]
  <br><b>Repository Status:</b> 
 [<img src='https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat' border=0 valign="middle"/>][14]
 [<img src='https://img.shields.io/discord/286167585270005763.svg' border=0 valign="middle"/>][9]
@@ -11,9 +13,6 @@
 ===
 
 This is the database to support the MangosThree server.
-
-It aims to be 100% compatible with the final version of CATA [World of Warcraft][2],
-namely [patch 4.3.4][4].
 
 
 Dependencies
@@ -111,11 +110,10 @@ World of Warcraft, and all related art, images, and lore are copyright [Blizzard
 
 
 [1]: http://blizzard.com/ "Blizzard Entertainment Inc. - We love you!"
-[2]: https://worldofwarcraft.com/ "World of Warcraft"
 [3]: https://www.getmangos.eu "Main MaNGOS Website"
-[4]: http://www.wowpedia.org/Patch_4.3.4 "Cataclysm - Patch 4.3.4 release notes"
 [8]: https://github.com/mangos/MaNGOS/blob/master/mangosFamily.md "The MaNGOS family of Icons"
 [9]: https://discord.gg/fPxMjHS8xs "Our community hub on Discord"
+[10]: https://github.com/r-log/mangosthree-database/actions/workflows/install.yml "GitHub Actions - Install check"
 [14]: http://makeapullrequest.com "Show PR's Welcome Icon"
 [15]: http://getmangos.eu/wiki "Mangos Wiki"
 [16]: https://www.getmangos.eu/bug-tracker/mangos-three/ "Mangos Online tracker"
