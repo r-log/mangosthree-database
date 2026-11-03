@@ -10,6 +10,8 @@
 -- and reputation overrides (RewRepValue1-5, the server's override column) on
 -- 1. The new columns are added only where missing, so the update can run
 -- again after a failure.
+-- A daily or weekly quest gets the repeatable special flag the server
+-- requires of it.
 -- ----------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`;
 
@@ -2487,6 +2489,10 @@ BEGIN
         UPDATE `quest_template` SET `QuestFlags` = 35651584 WHERE `entry` = 30107;
         UPDATE `quest_template` SET `QuestFlags` = 134217864 WHERE `entry` = 30112;
         UPDATE `quest_template` SET `QuestFlags` = 35651584 WHERE `entry` = 30116;
+
+        -- A daily or weekly quest is repeatable; the sniffed flags make 29244 a daily.
+        UPDATE `quest_template` SET `SpecialFlags` = `SpecialFlags` | 1
+         WHERE (`QuestFlags` & 0x9000) <> 0 AND (`SpecialFlags` & 1) = 0;
 
         INSERT INTO `db_version` VALUES (@cNewVersion, @cNewStructure,
             @cNewContent, @cNewDescription, @cNewComment);
