@@ -3,7 +3,7 @@
 --
 -- The giver and ender are TrinityCore's 4.3.4 rows (from 15595 sniffs), each checked on
 -- Wowhead: the 2012 page, or for 25363, 25366, 27984 and 495 Twinhead and today's
--- Wowhead. Quests the same sources call removed in Cataclysm (249, 1361, 3763, 3789,
+-- Wowhead. Quests Wowhead marks as no longer in the game (249, 1361, 3763, 3789,
 -- 3790, 3803, 9617, 14351) keep no giver.
 --
 --   Hadoken Swiftstrider (Feralas) takes back War on the Woodpaw, Alpha Strike,
