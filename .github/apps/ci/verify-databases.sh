@@ -148,6 +148,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_vendor "entry IN (54654, 54659, 54662) AND item IN (70217, 70220) AND ExtendedCost = 3549" 6
     check_rows_where mangos3 quest_template "entry = 6983 AND ReqCreatureOrGOId1 = 0 AND ReqCreatureOrGOId2 = 15664" 1
     check_rows_where mangos3 npc_trainer "spell = 750 AND spellcost = 0" 0
+    check_rows_where mangos3 quest_template "QuestFlags > 16777215" 846
 fi
 
 if [ $failures -gt 0 ]; then
