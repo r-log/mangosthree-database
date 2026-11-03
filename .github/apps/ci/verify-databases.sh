@@ -138,6 +138,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 skill_discovery_template "spellId = 57013" 0
     check_rows_where mangos3 gameobject_template "entry = 181285 AND data3 = 28720" 1
     check_rows_where mangos3 instance_template "(map = 409 AND parent = 230) OR (map = 469 AND parent = 229)" 2
+    check_rows_where mangos3 quest_template "entry = 9082 AND RequestItemsText = 'How do you expect me to get anything done without the items I requested?'" 1
 fi
 
 if [ $failures -gt 0 ]; then
