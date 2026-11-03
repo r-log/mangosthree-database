@@ -157,6 +157,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_trainer "spell = 40120 AND reqability1 = 34091 AND reqability2 = 33943" 36
     check_rows_where mangos3 npc_trainer "spell = 97462" 57
     check_rows_where mangos3 npc_trainer "spell = 8895 AND reqability1 = 20222" 36
+    check_rows_where mangos3 npc_trainer "entry = 328 AND spell IN (587, 5504, 42956)" 0
+    check_rows_where mangos3 npc_trainer "entry = 1231 AND spell IN (3127, 3044)" 0
 fi
 
 if [ $failures -gt 0 ]; then
