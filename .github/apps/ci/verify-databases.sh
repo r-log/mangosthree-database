@@ -144,6 +144,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 points_of_interest "entry = 183 AND ROUND(x) = 1739 AND ROUND(y) = -4281" 1
     check_rows_where mangos3 reputation_spillover_template "faction = 72 AND rank_1 = 4" 1
     check_rows_where mangos3 player_xp_for_level "lvl = 70 AND xp_for_next_level = 813000" 1
+    check_rows_where mangos3 creature_model_info "modelid = 2286 AND gender = 1" 1
+    check_rows_where mangos3 npc_vendor "entry IN (54654, 54659, 54662) AND item IN (70217, 70220) AND ExtendedCost = 3549" 6
 fi
 
 if [ $failures -gt 0 ]; then
