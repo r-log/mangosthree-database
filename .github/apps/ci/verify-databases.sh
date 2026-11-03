@@ -129,6 +129,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
     check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
     check_rows_where mangos3 creature_template "IconName = 'Directions'" 208
+    check_rows_where mangos3 npc_text "ID = 562 AND em0_0_delay = 0 AND em0_0 = 1" 1
+    check_rows_where mangos3 npc_text "ID IN (14606, 15258, 16242, 17703, 17705)" 5
 fi
 
 if [ $failures -gt 0 ]; then
