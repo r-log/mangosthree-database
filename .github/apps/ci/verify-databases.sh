@@ -166,6 +166,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 gossip_menu_option "action_trainer_id <> 0" 38
     check_rows_where mangos3 npc_trainer_template "entry = 122" 141
     check_rows_where mangos3 creature_template "Entry = 45286 AND GossipMenuId = 12180 AND TrainerType = 2" 1
+    check_rows_where mangos3 npc_trainer "spell = 53042" 0
 fi
 
 if [ $failures -gt 0 ]; then
