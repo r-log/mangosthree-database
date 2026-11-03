@@ -168,6 +168,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 creature_template "Entry = 45286 AND GossipMenuId = 12180 AND TrainerType = 2" 1
     check_rows_where mangos3 npc_trainer "spell = 53042" 0
     check_rows_where mangos3 npc_trainer "entry = 11146" 245
+    check_rows_where mangos3 npc_trainer "entry = 913 AND spell = 674" 0
 fi
 
 if [ $failures -gt 0 ]; then
