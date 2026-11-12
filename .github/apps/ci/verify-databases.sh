@@ -120,6 +120,7 @@ check_absent_index mangos3 'idx_%_loot_template_item'
 check_absent_column realmd account playerBot
 check_absent_column mangos3 item_template name
 check_absent_column mangos3 item_template Unknown2
+check_rows_where information_schema COLUMNS "TABLE_SCHEMA = 'mangos3' AND TABLE_NAME IN ('npc_vendor', 'npc_vendor_template') AND COLUMN_NAME = 'item' AND DATA_TYPE = 'mediumint' AND COLUMN_TYPE NOT LIKE '%unsigned%'" 2
 check_rows_where mangos3 mangos_string "entry IN (61, 62, 1015)" 0
 check_rows_where mangos3 mangos_string "entry = 1029 AND content_default = 'This command needs a logged-in account and cannot be used from the server console.' AND source_enum_tag = 'LANG_COMMAND_NEEDS_ACCOUNT' AND COALESCE(content_loc1, content_loc2, content_loc3, content_loc4, content_loc5, content_loc6, content_loc7, content_loc8, content_loc9, content_loc10, content_loc11) IS NULL" 1
 
