@@ -7,8 +7,11 @@
 --   - the absorb shields, whose share is written only in their
 --     4.3.4 tooltip text (direct_bonus of spell power, ap_bonus of
 --     attack power for Sacred Shield);
---   - Haunt and Holy Wrath, whose SpellEffect.dbc coefficient is 0
---     while their 4.3.4 tooltip text gives a spell power share.
+--   - Haunt, Holy Wrath, Lightwell Renew and the demons' Firebolt,
+--     Torment, Whiplash, Lash of Pain and Shadow Bite, whose
+--     SpellEffect.dbc coefficient is 0 while their 4.3.4 tooltip
+--     text gives a spell power share. A demon's share is of its own
+--     spell power, which the text writes as $SP*0.5.
 -- Every other row is removed. Each kept row's comment names the
 -- spell and the reason it stays.
 -- The update can run again after a failure.
@@ -75,6 +78,15 @@ BEGIN
         -- Overrides: SpellEffect.dbc holds 0, the 4.3.4 tooltip text a spell power share.
         UPDATE `spell_bonus_data` SET `direct_bonus` = 0.61, `comments` = 'Holy Wrath - attack power; override 0.61*SPH' WHERE `entry` = 2812;
         UPDATE `spell_bonus_data` SET `direct_bonus` = 0.6971, `comments` = 'Haunt - override 0.5577*1.25*SP' WHERE `entry` = 48181;
+        INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`, `ap_dot_bonus`, `comments`) VALUES
+            (3110, 0.657, 0, 0, 0, 'Firebolt - override 0.657*pet SP'),
+            (3716, 0.512, 0, 0, 0, 'Torment - override 0.512*pet SP'),
+            (6360, 0.85, 0, 0, 0, 'Whiplash - override 0.85*pet SP'),
+            (7001, 0, 0.308, 0, 0, 'Lightwell Renew - override 0.308*SP per tick'),
+            (7814, 0.612, 0, 0, 0, 'Lash of Pain - override 0.612*pet SP'),
+            (54049, 1.228, 0, 0, 0, 'Shadow Bite - override 1.228*pet SP')
+        ON DUPLICATE KEY UPDATE `direct_bonus` = VALUES(`direct_bonus`), `dot_bonus` = VALUES(`dot_bonus`),
+            `ap_bonus` = VALUES(`ap_bonus`), `ap_dot_bonus` = VALUES(`ap_dot_bonus`), `comments` = VALUES(`comments`);
 
         -- Attack-power rows: values unchanged, the comment names the reason.
         UPDATE `spell_bonus_data` SET `comments` = 'Garrote - attack power' WHERE `entry` = 703;
