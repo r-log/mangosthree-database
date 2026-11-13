@@ -7,13 +7,17 @@
 --   - the absorb shields, whose share is written only in their
 --     4.3.4 tooltip text (direct_bonus of spell power, ap_bonus of
 --     attack power for Sacred Shield);
---   - Haunt, Holy Wrath, Lightwell Renew and the demons' Firebolt,
---     Torment, Whiplash, Lash of Pain and Shadow Bite, whose
---     SpellEffect.dbc coefficient is 0 while their 4.3.4 tooltip
---     text gives a spell power share. A demon's share is of its own
---     spell power, which the text writes as $SP*0.5.
+--   - Haunt, Holy Wrath, Lightwell Renew, Prayer of Mending's heal
+--     and the demons' Firebolt, Torment, Whiplash, Lash of Pain and
+--     Shadow Bite, whose SpellEffect.dbc coefficient is 0 while
+--     their 4.3.4 tooltip text gives a spell power share. A demon's
+--     share is of its own spell power, which the text writes as
+--     $SP*0.5.
 -- Every other row is removed. Each kept row's comment names the
 -- spell and the reason it stays.
+--
+-- The help of .debug spellcoefs describes what the command prints
+-- now, and mangos_string 1202-1206, which nothing reads, go.
 -- The update can run again after a failure.
 -- ----------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`;
@@ -84,6 +88,7 @@ BEGIN
             (6360, 0.85, 0, 0, 0, 'Whiplash - override 0.85*pet SP'),
             (7001, 0, 0.308, 0, 0, 'Lightwell Renew - override 0.308*SP per tick'),
             (7814, 0.612, 0, 0, 0, 'Lash of Pain - override 0.612*pet SP'),
+            (33110, 0.318, 0, 0, 0, 'Prayer of Mending heal - override 0.318*SP'),
             (54049, 1.228, 0, 0, 0, 'Shadow Bite - override 1.228*pet SP')
         ON DUPLICATE KEY UPDATE `direct_bonus` = VALUES(`direct_bonus`), `dot_bonus` = VALUES(`dot_bonus`),
             `ap_bonus` = VALUES(`ap_bonus`), `ap_dot_bonus` = VALUES(`ap_dot_bonus`), `comments` = VALUES(`comments`);
@@ -119,6 +124,13 @@ BEGIN
         UPDATE `spell_bonus_data` SET `comments` = 'Blood Plague - attack power' WHERE `entry` = 55078;
         UPDATE `spell_bonus_data` SET `comments` = 'Frost Fever - attack power' WHERE `entry` = 55095;
         UPDATE `spell_bonus_data` SET `comments` = 'Faerie Fire (Feral) - attack power' WHERE `entry` = 60089;
+
+        -- .debug spellcoefs prints the coefficients of the client per effect.
+        REPLACE INTO `command` (`id`, `command_text`, `security`, `help_text`) VALUES
+            (143, 'debug spellcoefs', 3, 'Syntax: .debug spellcoefs #spellid\r\n\r\nShow the spell_bonus_data row of spell #spellid and, for each effect, the kind of amount it adds spell power to (damage, heal or absorb; direct or periodic), its SpellEffect.dbc coefficient, the coefficient of the first effect of that kind scaled at your level (the default max level from the console), the part of the row for it and the coefficient that applies. A damage effect of a spell with SPELL_ATTR_EX3_NO_DONE_BONUS is marked; an effect of no kind takes no spell power share.');
+
+        -- The strings of the old .debug spellcoefs output.
+        DELETE FROM `mangos_string` WHERE `entry` IN (1202, 1203, 1204, 1205, 1206);
 
         INSERT INTO `db_version` VALUES (@cNewVersion, @cNewStructure,
             @cNewContent, @cNewDescription, @cNewComment);

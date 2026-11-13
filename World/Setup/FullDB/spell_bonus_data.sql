@@ -54,6 +54,7 @@ INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`
 (19306,0,0,0.2,0,'Counterattack - attack power'),
 (20925,0.09,0,0.056,0,'Holy Shield - attack power'),
 (25742,0.07,0,0.039,0,'Seal of Righteousness - attack power'),
+(33110,0.318,0,0,0,'Prayer of Mending heal - override 0.318*SP'),
 (33745,0,0,0.01,0.01,'Lacerate - attack power'),
 (42463,0,0,0.003,0,'Seal of Truth - attack power'),
 (45477,0,0,0.1,0,'Icy Touch - attack power'),

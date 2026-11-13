@@ -123,6 +123,7 @@ check_absent_column mangos3 item_template Unknown2
 check_rows_where information_schema COLUMNS "TABLE_SCHEMA = 'mangos3' AND TABLE_NAME IN ('npc_vendor', 'npc_vendor_template') AND COLUMN_NAME = 'item' AND DATA_TYPE = 'mediumint' AND COLUMN_TYPE NOT LIKE '%unsigned%'" 2
 check_rows_where information_schema COLUMNS "TABLE_SCHEMA = 'character3' AND TABLE_NAME = 'character_achievement_progress' AND COLUMN_NAME = 'started' AND DATA_TYPE = 'bigint' AND COLUMN_TYPE LIKE '%unsigned%' AND IS_NULLABLE = 'NO'" 1
 check_rows_where mangos3 mangos_string "entry IN (61, 62, 1015)" 0
+check_rows_where mangos3 mangos_string "entry IN (1202, 1203, 1204, 1205, 1206)" 0
 check_rows_where mangos3 mangos_string "entry = 1029 AND content_default = 'This command needs a logged-in account and cannot be used from the server console.' AND source_enum_tag = 'LANG_COMMAND_NEEDS_ACCOUNT' AND COALESCE(content_loc1, content_loc2, content_loc3, content_loc4, content_loc5, content_loc6, content_loc7, content_loc8, content_loc9, content_loc10, content_loc11) IS NULL" 1
 
 check_rows_where mangos3 hotfix_data "type = 2442913102" 164
@@ -131,7 +132,7 @@ check_rows_where mangos3 spell_template "id IN (110158, 111533) AND attr = 28437
 check_rows_where mangos3 spell_template "id = 37814 AND attr = 256 AND attr_ex = 268435456 AND effect0 = 0 AND effect0_trigger_spell = 0" 1
 if [ $populate = 1 ]; then
     check_rows_where mangos3 spell_bonus_data "ap_bonus <> 0 OR ap_dot_bonus <> 0" 32
-    check_rows_where mangos3 spell_bonus_data "entry > 0" 45
+    check_rows_where mangos3 spell_bonus_data "entry > 0" 46
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
     check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
     check_rows_where mangos3 creature_template "IconName = 'Directions'" 208
