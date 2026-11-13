@@ -130,7 +130,7 @@ BEGIN
 
         -- .debug spellcoefs prints the coefficients of the client per effect.
         REPLACE INTO `command` (`id`, `command_text`, `security`, `help_text`) VALUES
-            (143, 'debug spellcoefs', 3, 'Syntax: .debug spellcoefs #spellid\r\n\r\nShow the spell_bonus_data row of spell #spellid and, for each effect, the kind of amount it adds spell power to (damage, heal or absorb; direct or periodic), its SpellEffect.dbc coefficient, the coefficient of the first effect of that kind scaled at your level (the default max level from the console), the part of the row for it and the coefficient that applies. A damage effect of a spell with SPELL_ATTR_EX3_NO_DONE_BONUS is marked; an effect of no kind takes no spell power share.');
+            (143, 'debug spellcoefs', 3, 'Syntax: .debug spellcoefs #spellid\r\n\r\nShow the spell_bonus_data row of spell #spellid and, for each effect, the kind of amount it adds spell power to (damage, heal or absorb; direct or periodic), its SpellEffect.dbc coefficient, the coefficient of the first effect of that kind scaled at your level (the default max level from the console), the part of the row for it and the coefficient that applies. Each such effect also shows the coefficient a pet casting the spell takes: the row, then the SpellEffect.dbc value, then the cast-time default. A damage effect of a spell with SPELL_ATTR_EX3_NO_DONE_BONUS is marked; an effect of no kind takes no spell power share.');
 
         -- The strings of the old .debug spellcoefs output.
         DELETE FROM `mangos_string` WHERE `entry` IN (1202, 1203, 1204, 1205, 1206);
