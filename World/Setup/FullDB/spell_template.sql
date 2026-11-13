@@ -78,7 +78,9 @@ INSERT INTO `spell_template` (`id`, `attr`, `attr_ex`, `attr_ex2`, `attr_ex3`, `
 (89691,0,0,0,0,0,1,0,5,25,17,12,0,0,0,0,'Ajamon\'s Portal to the Southsea Holdfast serverside spell'),
 (90244,0,0,0,0,0,1,0,5,25,17,12,0,0,0,0,'Portal to Vashj\'ir serverside spell'),
 (90245,0,0,0,0,0,1,0,5,25,17,12,0,0,0,0,'Teleport to Vashj\'ir serverside spell'),
-(96364,0,0,0,0,0,1,0,77,25,0,12,0,0,0,0,'Extra Parachutes serverside spell');
+(96364,0,0,0,0,0,1,0,77,25,0,12,0,0,0,0,'Extra Parachutes serverside spell'),
+(110158,2843738368,268436512,540677,269943552,0,0,36,6,22,7,28,4,0,0,0,'Encounter credit - End Time - Murozond'),
+(111533,2843738368,268436512,540677,269943552,0,0,36,6,22,7,28,4,0,0,0,'Encounter credit - Dragon Soul - Madness of Deathwing');
 /*!40000 ALTER TABLE `spell_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
