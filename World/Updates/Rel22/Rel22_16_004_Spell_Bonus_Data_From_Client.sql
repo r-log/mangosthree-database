@@ -18,6 +18,9 @@
 --
 -- The help of .debug spellcoefs describes what the command prints
 -- now, and mangos_string 1202-1206, which nothing reads, go.
+-- The Searing Totem (creature 2523) casts Searing Bolt 3606, the
+-- bolt its summon spell 3599 names, instead of 22048, the bolt of a
+-- test totem with no spell power share.
 -- The update can run again after a failure.
 -- ----------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`;
@@ -131,6 +134,9 @@ BEGIN
 
         -- The strings of the old .debug spellcoefs output.
         DELETE FROM `mangos_string` WHERE `entry` IN (1202, 1203, 1204, 1205, 1206);
+
+        -- The Searing Totem casts Searing Bolt.
+        UPDATE `creature_template_spells` SET `spell1` = 3606 WHERE `entry` = 2523 AND `spell1` = 22048;
 
         INSERT INTO `db_version` VALUES (@cNewVersion, @cNewStructure,
             @cNewContent, @cNewDescription, @cNewComment);
