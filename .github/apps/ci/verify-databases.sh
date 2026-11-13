@@ -131,8 +131,8 @@ check_rows_where mangos3 spell_template "id IN (37264, 37278, 37365)" 0
 check_rows_where mangos3 spell_template "id IN (110158, 111533) AND attr = 2843738368 AND duration_index = 36 AND effect0 = 6 AND effect0_apply_aura_name = 4 AND effect0_radius_idx = 28" 2
 check_rows_where mangos3 spell_template "id = 37814 AND attr = 256 AND attr_ex = 268435456 AND effect0 = 0 AND effect0_trigger_spell = 0" 1
 if [ $populate = 1 ]; then
-    check_rows_where mangos3 spell_bonus_data "ap_bonus <> 0 OR ap_dot_bonus <> 0" 32
-    check_rows_where mangos3 spell_bonus_data "entry > 0" 46
+    check_rows_where mangos3 spell_bonus_data "ap_bonus <> 0 OR ap_dot_bonus <> 0" 26
+    check_rows_where mangos3 spell_bonus_data "entry > 0" 41
     check_rows_where mangos3 creature_template_spells "entry = 2523 AND spell1 = 3606" 1
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
     check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
