@@ -43,6 +43,7 @@ INSERT INTO `spell_template` (`id`, `attr`, `attr_ex`, `attr_ex2`, `attr_ex3`, `
 (35904,0,0,0,0,0,101,21,28,44,0,8,0,20405,64,0,'Summon Nether Charge right of the caster'),
 (35905,0,0,0,0,0,101,21,28,43,0,8,0,20405,64,0,'Summon Nether Charge left of the caster'),
 (35906,0,0,0,0,0,101,21,28,41,0,8,0,20405,64,0,'Summon Nether Charge front of the caster'),
+(37814,256,268435456,0,0,0,0,0,0,0,0,0,0,0,0,0,'Aggro (2 yd pbae) - triggered by Fuel Tank Aggro 50162, no effect'),
 (44920,0,0,0,0,0,101,21,6,1,0,0,56,24941,0,0,'Model - Shattered Sun Marksman - BE Male Tier 4'),
 (44924,0,0,0,0,0,101,21,6,1,0,0,56,24945,0,0,'Model - Shattered Sun Marksman - BE Female Tier 4'),
 (44928,0,0,0,0,0,101,21,6,1,0,0,56,24949,0,0,'Model - Shattered Sun Marksman - Draenei Male Tier 4'),
