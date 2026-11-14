@@ -12,7 +12,13 @@
 --     power only);
 --   - sets nine rows to the share their 4.3.4 tooltip text writes;
 --   - adds ten rows whose 4.3.4 tooltip text writes a plain
---     attack-power share while field 30 is 0.
+--     attack-power share while field 30 is 0;
+--   - adds Earthquake's spell power term: 61882's 4.3.4 tooltip
+--     text adds 0.11 of the spell power by hand to the physical
+--     damage of 77478, whose SpellEffect.dbc share is taken of
+--     the flat physical damage-done auras alone.
+-- The help of .debug spellcoefs names the attack-power lines and
+-- the spell power the share multiplies.
 -- Each written row's comment names the spell, the text's formula
 -- and the date of the archived Wowhead page that shows it.
 -- The update can run again after a failure.
@@ -103,6 +109,17 @@ BEGIN
             (82928, 0, 0, 0.724, 0, 'Aimed Shot! - RAP*0.724; Wowhead 2012-05-22')
         ON DUPLICATE KEY UPDATE `direct_bonus` = VALUES(`direct_bonus`), `dot_bonus` = VALUES(`dot_bonus`),
             `ap_bonus` = VALUES(`ap_bonus`), `ap_dot_bonus` = VALUES(`ap_dot_bonus`), `comments` = VALUES(`comments`);
+
+        -- Earthquake: the 4.3.4 text of 61882 writes 0.11 of the spell power on top of the
+        -- share SpellEffect.dbc holds for the physical damage of 77478.
+        INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`, `ap_dot_bonus`, `comments`) VALUES
+            (77478, 0.11, 0, 0, 0, 'Earthquake - 0.11*SPN per hit, 61882''s text; Wowhead 2012-05-12')
+        ON DUPLICATE KEY UPDATE `direct_bonus` = VALUES(`direct_bonus`), `dot_bonus` = VALUES(`dot_bonus`),
+            `ap_bonus` = VALUES(`ap_bonus`), `ap_dot_bonus` = VALUES(`ap_dot_bonus`), `comments` = VALUES(`comments`);
+
+        -- .debug spellcoefs prints the attack-power lines and the spell power the share multiplies.
+        REPLACE INTO `command` (`id`, `command_text`, `security`, `help_text`) VALUES
+            (143, 'debug spellcoefs', 3, 'Syntax: .debug spellcoefs #spellid\r\n\r\nShow the spell_bonus_data row of spell #spellid and, for each effect, the kind of amount it adds spell power to (damage, heal or absorb; direct or periodic), its SpellEffect.dbc coefficient, the coefficient of the first effect of that kind scaled at your level (the default max level from the console), the part of the row for it and the coefficient that applies. Each such effect also shows the coefficient a pet casting the spell takes: the row, then the SpellEffect.dbc value, then the cast-time default. A damage effect of a spell with SPELL_ATTR_EX3_NO_DONE_BONUS is marked; an effect of no kind takes no spell power share. Then Spell.dbc''s attack-power coefficient and, for a direct hit and a tick, whether the spell''s damage takes it, the row''s attack-power part, the coefficient a player''s damage takes and the one a heal, an absorb or a pet''s spell takes. Then which spell power the share multiplies: the spell power of the spell''s school, or for a physical spell the flat physical damage-done auras alone, a row''s spell-power part then standing for the tooltip''s term on the spell power.');
 
         INSERT INTO `db_version` VALUES (@cNewVersion, @cNewStructure,
             @cNewContent, @cNewDescription, @cNewComment);

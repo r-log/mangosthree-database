@@ -63,6 +63,7 @@ INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`
 (55078,0,0,0,0.06325,'Blood Plague - attack power'),
 (55095,0,0,0,0.06325,'Frost Fever - attack power'),
 (56641,0,0,0.021,0,'Steady Shot - RAP*0.021; Wowhead 2012-05-12'),
+(77478,0.11,0,0,0,'Earthquake - 0.11*SPN per hit, 61882\'s text; Wowhead 2012-05-12'),
 (77758,0,0,0.0982,0.0167,'Thrash - AP*0.0982, (AP*0.0167+m2)*3 over 3 ticks; Wowhead 2012-05-12'),
 (77767,0,0,0.017,0,'Cobra Shot - RAP*0.017; Wowhead 2012-05-12'),
 (82928,0,0,0.724,0,'Aimed Shot! - RAP*0.724; Wowhead 2012-05-22'),
