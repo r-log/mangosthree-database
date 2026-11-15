@@ -135,7 +135,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 spell_bonus_data "entry > 0" 42
     check_rows_where mangos3 spell_proc_event "entry IN (44445, 11095, 29074, 64343, 79683)" 5
     check_rows_where mangos3 spell_proc_event "entry = 48108" 0
-    check_rows_where mangos3 creature_template_addon "entry = 44214 AND auras = '82690 82733 11010 10729'" 1
+    check_rows_where mangos3 creature_template_addon "entry = 44214 AND auras = '82690 82733 27985'" 1
     check_rows_where mangos3 creature_template_spells "entry = 2523 AND spell1 = 3606" 1
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
     check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
