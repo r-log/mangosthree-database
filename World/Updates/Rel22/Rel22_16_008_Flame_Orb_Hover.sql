@@ -1,12 +1,14 @@
 -- ----------------------------------------------------------------
 -- The Flame Orb creature hovers through the Hover aura.
 --
--- The Flaming Orb, creature 44214, floats at chest height. Hover
--- 11010 is the 4.3.4 spell whose only effect is the hover aura. The
--- row below adds it to the orb's addon auras, so the orb is made
--- hovering and its create block carries the hover flag, its height
--- and its lifted position. Only the auras change. The update can run
--- again after a failure.
+-- The Flaming Orb, creature 44214, floats at chest height and sinks
+-- slowly when it is summoned higher. Hover 11010 and Feather Fall
+-- 10729 are the 4.3.4 spells whose only effects are the hover aura
+-- and the feather fall aura. The row below adds both to the orb's
+-- addon auras, so the orb is made hovering and slow-falling and its
+-- create block carries both flags, its height and its lifted
+-- position. Only the auras change. The update can run again after a
+-- failure.
 -- ----------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`;
 
@@ -44,8 +46,8 @@ BEGIN
     IF (@cCurResult = @cOldResult) THEN
         START TRANSACTION;
 
-        -- Flaming Orb 44214: its scan (82690), its visual (82733) and Hover (11010).
-        UPDATE `creature_template_addon` SET `auras` = '82690 82733 11010' WHERE `entry` = 44214;
+        -- Flaming Orb 44214: its scan (82690), its visual (82733), Hover (11010) and Feather Fall (10729).
+        UPDATE `creature_template_addon` SET `auras` = '82690 82733 11010 10729' WHERE `entry` = 44214;
 
         INSERT INTO `db_version` VALUES (@cNewVersion, @cNewStructure,
             @cNewContent, @cNewDescription, @cNewComment);
