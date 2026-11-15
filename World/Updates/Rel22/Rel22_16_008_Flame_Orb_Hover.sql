@@ -6,9 +6,7 @@
 -- passive spell whose effects are the water walk, feather fall and
 -- hover auras. The row below adds it to the orb's addon auras, so the
 -- orb is made hovering and slow-falling and its create block carries
--- both flags, its height and its lifted position. Hover 11010 and
--- Feather Fall 10729 cannot both stay on one unit: they share the
--- default icon, and the server drops the older of two such auras.
+-- both flags, its height and its lifted position.
 -- Only the auras change. The update can run again after a failure.
 -- ----------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`;
