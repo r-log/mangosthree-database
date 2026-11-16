@@ -1,8 +1,8 @@
 -- ----------------------------------------------------------------
 -- The Flame Orb creature is drawn: its visual aura is left off.
 --
--- The Flaming Orb, creature 44214, carried the visual aura 82733.
--- That aura's state kit freezes the orb's birth animation on its
+-- The Flaming Orb, creature 44214, no longer carries the visual aura
+-- 82733, whose state kit freezes the orb's birth animation on its
 -- first frame, where the orb model draws nothing and only the blob
 -- shadow shows. The row below keeps the scan and water walk 82690 and
 -- Floating 27985 and drops 82733, so the orb plays its animation and
