@@ -1,15 +1,14 @@
 -- ----------------------------------------------------------------
--- Arcane Missiles! and Impact roll on every offensive hit, with or
--- without damage.
+-- Offensive State and Impact accept a mage spell's hit or crit, with
+-- or without damage.
 --
 -- Offensive State 79684 (the proc of Arcane Missiles!) and Impact
--- 11103, whose rank 2 12357 takes the row of the first rank, get a
--- spell_proc_event row: mage spells (family 3), no class mask, and
--- the hit kinds normal hit, critical hit and hit without damage
--- (procEx 0x4003). A hit that deals no damage (Slow, Polymorph,
--- Counterspell) now rolls the proc; a miss, a resist, an immune and
--- a reflect do not, and the end of a cast no longer rolls it. The
--- proc flags stay the spells' own from Spell.dbc.
+-- 11103 each get a spell_proc_event row: mage spells (family 3), no
+-- class mask, and the hit kinds normal hit, critical hit and hit
+-- without damage (procEx 0x4003). Impact's rank 2, 12357, takes the
+-- row of rank 1. A miss, a resist, an immune, a reflect and the end
+-- of a cast are refused. The proc flags stay the spells' own from
+-- Spell.dbc.
 -- The update can run again after a failure.
 -- ----------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`;
@@ -39,7 +38,7 @@ BEGIN
     SET @cNewStructure = '16';
     SET @cNewContent = '010';
     SET @cNewDescription = 'Mage_Offensive_Procs';
-    SET @cNewComment = 'Arcane Missiles! and Impact roll on every offensive hit, with or without damage';
+    SET @cNewComment = 'Offensive State and Impact accept mage hits with or without damage';
 
     SET @cCurResult := (SELECT `description` FROM `db_version` ORDER BY `version` DESC, `structure` DESC, `content` DESC LIMIT 0,1);
     SET @cOldResult := (SELECT `description` FROM `db_version` WHERE `version` = @cOldVersion AND `structure` = @cOldStructure AND `content` = @cOldContent);
