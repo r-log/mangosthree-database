@@ -188,7 +188,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_trainer "spell = 53042" 0
     check_rows_where mangos3 npc_trainer "entry = 11146" 245
     check_rows_where mangos3 npc_trainer "entry = 913 AND spell = 674" 0
-    check_rows_where mangos3 creature_template "Expansion >= 0" 40563
+    check_rows_where mangos3 creature_template "Expansion >= 0" 40566
     check_rows_where mangos3 creature_template_classlevelstats "Level BETWEEN 1 AND 90" 360
     check_rows_where mangos3 quest_relations "actor = 0 AND entry = 7875 AND role = 1 AND quest IN (25363, 25364, 25366, 25367, 25369)" 5
     check_rows_where mangos3 quest_relations "actor = 0 AND quest IN (495, 10985, 11595, 24912, 26951, 27984)" 12
