@@ -2,9 +2,9 @@
 -- Mirror Image's images run their own AI and cannot swing.
 --
 -- The three images, 31216 (without the glyph), 47243 (Arcane) and
--- 47244 (Fire), take the server's MirrorImageAI, which casts their
--- spells at the mage's target, and the no-melee flag. Their unit
--- flags go to 0: the sniffed values held states (31216 stunned and
+-- 47244 (Fire), take the server's MirrorImageAI, which casts
+-- their spells at the mage's target, and the no-melee flag. Their
+-- unit flags go to 0: the sniffed values held states (31216
 -- fleeing, 47243 silenced and fleeing) the summon copied onto the
 -- image. Their stats come from the class level table (expansion
 -- 3); the multipliers keep the 77490 health, 19394 mana and 8980
