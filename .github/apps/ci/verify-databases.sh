@@ -132,7 +132,8 @@ check_rows_where mangos3 spell_template "id IN (110158, 111533) AND attr = 28437
 check_rows_where mangos3 spell_template "id = 37814 AND attr = 256 AND attr_ex = 268435456 AND effect0 = 0 AND effect0_trigger_spell = 0" 1
 if [ $populate = 1 ]; then
     check_rows_where mangos3 spell_bonus_data "ap_bonus <> 0 OR ap_dot_bonus <> 0" 26
-    check_rows_where mangos3 spell_bonus_data "entry > 0" 42
+    check_rows_where mangos3 spell_bonus_data "entry > 0" 43
+    check_rows_where mangos3 spell_bonus_data "entry = 31707 AND ROUND(direct_bonus, 3) = 0.833 AND dot_bonus = 0" 1
     check_rows_where mangos3 spell_proc_event "entry IN (44445, 11095, 29074, 64343, 79683)" 5
     check_rows_where mangos3 spell_proc_event "entry = 48108" 0
     check_rows_where mangos3 spell_proc_event "entry IN (79684, 11103) AND SpellFamilyName = 3 AND procEx = 16387" 2
