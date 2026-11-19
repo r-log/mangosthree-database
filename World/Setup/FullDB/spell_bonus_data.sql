@@ -48,6 +48,7 @@ INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`
 (19306,0,0,0.2,0,'Counterattack - attack power'),
 (19434,0,0,0.724,0,'Aimed Shot - RAP*0.724; Wowhead 2012-05-12'),
 (20187,0,0,0.2,0,'Judgement of Righteousness - 1+0.2*AP+0.32*SPH; Wowhead 2011-01-28'),
+(31707,0.833,0,0,0,'Waterbolt - override 0.833*pet SP'),
 (33110,0.318,0,0,0,'Prayer of Mending heal - override 0.318*SP'),
 (33745,0,0,0.0552,0.00369,'Lacerate - AP*0.0552, 5*(m1+AP*0.00369) over 5 ticks; Wowhead 2012-05-03'),
 (45477,0,0,0.2,0,'Icy Touch - AP*0.2; Wowhead 2012-05-11'),
