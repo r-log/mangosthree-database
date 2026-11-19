@@ -140,6 +140,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 spell_proc_event "(entry = 11213 AND procEx = 3 AND Cooldown = 15) OR (entry = 31571 AND SpellFamilyMaskB0 = 34 AND CustomChance = 100) OR (entry = 79683 AND SpellFamilyMaskA0 = 2048) OR (entry = 31569 AND SpellFamilyMaskA0 = 65536)" 4
     check_rows_where mangos3 creature_template_addon "entry = 44214 AND auras = '82690 27985'" 1
     check_rows_where mangos3 creature_template "Entry = 44199 AND UnitFlags = 33554520 AND ModelId1 = 34997" 1
+    check_rows_where mangos3 creature_template_addon "entry = 45322 AND auras = '84717 27985'" 1
+    check_rows_where mangos3 creature_template "Entry = 45322 AND UnitFlags = 33554520" 1
     check_rows_where mangos3 creature_template_spells "entry = 2523 AND spell1 = 3606" 1
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
     check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
