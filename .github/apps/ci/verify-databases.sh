@@ -142,6 +142,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 creature_template "Entry = 44199 AND UnitFlags = 33554520 AND ModelId1 = 34997" 1
     check_rows_where mangos3 creature_template_addon "entry = 45322 AND auras = '84717 27985'" 1
     check_rows_where mangos3 creature_template "Entry = 45322 AND UnitFlags = 33554520" 1
+    check_rows_where mangos3 creature_template "Entry IN (31216, 47243, 47244) AND AIName = 'MirrorImageAI' AND UnitFlags = 0 AND ExtraFlags & 131072 AND Expansion = 3" 3
+    check_rows_where mangos3 spell_script_target "entry = 58836 AND type = 1 AND targetEntry IN (31216, 47243, 47244)" 3
     check_rows_where mangos3 creature_template_spells "entry = 2523 AND spell1 = 3606" 1
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
     check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
