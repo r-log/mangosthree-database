@@ -139,11 +139,14 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 spell_proc_event "entry IN (79684, 11103) AND SpellFamilyName = 3 AND procEx = 16387" 2
     check_rows_where mangos3 spell_proc_event "SpellFamilyMaskC0 = 16384 AND ((entry = 44543 AND procEx = 3) OR (entry = 44546 AND procEx = 524288))" 2
     check_rows_where mangos3 spell_proc_event "entry IN (44543, 44546, 44561, 11175) AND procEx IN (3, 524288)" 4
+    check_rows_where mangos3 spell_proc_event "entry IN (56372, 11185)" 0
     check_rows_where mangos3 spell_proc_event "(entry = 11213 AND procEx = 3 AND Cooldown = 15) OR (entry = 31571 AND SpellFamilyMaskB0 = 34 AND CustomChance = 100) OR (entry = 79683 AND SpellFamilyMaskA0 = 2048) OR (entry = 31569 AND SpellFamilyMaskA0 = 65536)" 4
     check_rows_where mangos3 creature_template_addon "entry = 44214 AND auras = '82690 27985'" 1
     check_rows_where mangos3 creature_template "Entry = 44199 AND UnitFlags = 33554520 AND ModelId1 = 34997" 1
     check_rows_where mangos3 creature_template_addon "entry = 45322 AND auras = '84717 27985'" 1
     check_rows_where mangos3 creature_template "Entry = 45322 AND UnitFlags = 33554520" 1
+    check_rows_where mangos3 creature_template "Entry IN (31216, 47243, 47244) AND AIName = 'MirrorImageAI' AND UnitFlags = 0 AND ExtraFlags & 131072 AND Expansion = 3" 3
+    check_rows_where mangos3 spell_script_target "entry = 58836 AND type = 1 AND targetEntry IN (31216, 47243, 47244)" 3
     check_rows_where mangos3 creature_template_spells "entry = 2523 AND spell1 = 3606" 1
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
     check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
@@ -188,7 +191,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_trainer "spell = 53042" 0
     check_rows_where mangos3 npc_trainer "entry = 11146" 245
     check_rows_where mangos3 npc_trainer "entry = 913 AND spell = 674" 0
-    check_rows_where mangos3 creature_template "Expansion >= 0" 40563
+    check_rows_where mangos3 creature_template "Expansion >= 0" 40566
     check_rows_where mangos3 creature_template_classlevelstats "Level BETWEEN 1 AND 90" 360
     check_rows_where mangos3 quest_relations "actor = 0 AND entry = 7875 AND role = 1 AND quest IN (25363, 25364, 25366, 25367, 25369)" 5
     check_rows_where mangos3 quest_relations "actor = 0 AND quest IN (495, 10985, 11595, 24912, 26951, 27984)" 12
