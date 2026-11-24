@@ -143,6 +143,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 creature_template "Entry = 44199 AND UnitFlags = 33554520 AND ModelId1 = 34997" 1
     check_rows_where mangos3 creature_template_addon "entry = 45322 AND auras = '84717 27985'" 1
     check_rows_where mangos3 creature_template "Entry = 45322 AND UnitFlags = 33554520" 1
+    check_rows_where mangos3 creature_template "Entry IN (31216, 47243, 47244) AND AIName = 'MirrorImageAI' AND UnitFlags = 0 AND ExtraFlags & 131072 AND Expansion = 3" 3
+    check_rows_where mangos3 spell_script_target "entry = 58836 AND type = 1 AND targetEntry IN (31216, 47243, 47244)" 3
     check_rows_where mangos3 creature_template_spells "entry = 2523 AND spell1 = 3606" 1
     check_rows_where mangos3 item_sparse "entry = 71953 AND name = 'Fallen Adventurer''s Journal'" 1
     check_rows_where mangos3 creature_template "Entry = 6 AND CreatureType = 7 AND Family = 0" 1
@@ -187,7 +189,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 npc_trainer "spell = 53042" 0
     check_rows_where mangos3 npc_trainer "entry = 11146" 245
     check_rows_where mangos3 npc_trainer "entry = 913 AND spell = 674" 0
-    check_rows_where mangos3 creature_template "Expansion >= 0" 40563
+    check_rows_where mangos3 creature_template "Expansion >= 0" 40566
     check_rows_where mangos3 creature_template_classlevelstats "Level BETWEEN 1 AND 90" 360
     check_rows_where mangos3 quest_relations "actor = 0 AND entry = 7875 AND role = 1 AND quest IN (25363, 25364, 25366, 25367, 25369)" 5
     check_rows_where mangos3 quest_relations "actor = 0 AND quest IN (495, 10985, 11595, 24912, 26951, 27984)" 12
