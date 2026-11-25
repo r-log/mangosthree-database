@@ -136,7 +136,8 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 spell_bonus_data "entry = 31707 AND ROUND(direct_bonus, 3) = 0.833 AND dot_bonus = 0" 1
     check_rows_where mangos3 spell_proc_event "entry IN (44445, 11095, 29074, 64343, 79683)" 5
     check_rows_where mangos3 spell_proc_event "entry = 48108" 0
-    check_rows_where mangos3 spell_proc_event "entry IN (79684, 11103) AND SpellFamilyName = 3 AND procEx = 16387" 2
+    check_rows_where mangos3 spell_proc_event "entry = 11103 AND SpellFamilyName = 3 AND procEx = 16387" 1
+    check_rows_where mangos3 spell_proc_event "entry = 79684 AND SpellFamilyName = 3 AND SpellFamilyMaskA0 = 0 AND SpellFamilyMaskB0 = 0 AND SpellFamilyMaskC0 = 0 AND procFlags = 0 AND procEx = 524288" 1
     check_rows_where mangos3 spell_proc_event "SpellFamilyMaskC0 = 16384 AND ((entry = 44543 AND procEx = 3) OR (entry = 44546 AND procEx = 524288))" 2
     check_rows_where mangos3 spell_proc_event "entry IN (44543, 44546, 44561, 11175) AND procEx IN (3, 524288)" 4
     check_rows_where mangos3 spell_proc_event "entry IN (56372, 11185)" 0
