@@ -41,7 +41,7 @@ BEGIN
     SET @cNewVersion = '22';
     SET @cNewStructure = '16';
     SET @cNewContent = '020';
-    SET @cNewDescription = 'Priest_Divine_Aegis_Focused_Will';
+    SET @cNewDescription = 'Priest_Aegis_Focused_Will';
     SET @cNewComment = 'Divine Aegis and Focused Will take a normal hit as well as a critical one';
 
     SET @cCurResult := (SELECT `description` FROM `db_version` ORDER BY `version` DESC, `structure` DESC, `content` DESC LIMIT 0,1);
