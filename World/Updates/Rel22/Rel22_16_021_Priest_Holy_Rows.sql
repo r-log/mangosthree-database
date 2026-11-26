@@ -13,11 +13,11 @@
 --     the heals whose critical heal reaches the talent, beside
 --     Binding Heal and Penance's heal. Rank 15362 takes this row.
 --   - Blessed Resilience 33142: a normal or a critical hit the
---     priest takes reaches the talent, from a critical hit alone;
---     the server's script gives the buff for a critical hit and for
---     a hit greater than 10% of his maximum health, the percent its
---     effect 1 holds, and refuses the rest. Rank 33145 takes this
---     row.
+--     priest takes reaches the talent, where only a critical hit
+--     did before; the server's script gives the buff for a
+--     critical hit and for a hit greater than 10% of his maximum
+--     health, the percent its effect 1 holds, and refuses the
+--     rest. Rank 33145 takes this row.
 --   - Divine Touch 63534: a chance of 100, where the client's data
 --     gives the talent none, so the priest's Renew heals at once
 --     each time it lands. Rank 63542 takes this row.
