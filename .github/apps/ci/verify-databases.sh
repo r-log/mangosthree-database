@@ -147,6 +147,7 @@ if [ $populate = 1 ]; then
     check_rows_where mangos3 spell_proc_event "entry IN (88690, 15362, 33145, 63542)" 0
     check_rows_where mangos3 spell_proc_event "(entry = 33191 AND SchoolMask = 127 AND SpellFamilyName = 0 AND SpellFamilyMaskA0 = 0 AND SpellFamilyMaskB0 = 0 AND SpellFamilyMaskC0 = 0 AND procFlags = 0 AND procEx = 2) OR (entry = 14910 AND SpellFamilyName = 6 AND SpellFamilyMaskA0 = 0 AND SpellFamilyMaskB0 = 0 AND SpellFamilyMaskC0 = 0 AND SpellFamilyMaskC1 = 65536 AND procFlags = 0 AND procEx = 0) OR (entry = 87192 AND SpellFamilyName = 6 AND SpellFamilyMaskA0 = 8192 AND SpellFamilyMaskB0 = 0 AND SpellFamilyMaskC0 = 0 AND procFlags = 0 AND procEx = 2)" 3
     check_rows_where mangos3 spell_proc_event "entry IN (78228, 33371, 87195)" 0
+    check_rows_where mangos3 spell_proc_event "entry = 63625 AND SpellFamilyName = 6 AND SpellFamilyMaskA0 = 33554432 AND procFlags = 65536 AND procEx = 0 AND CustomChance = 100" 1
     check_rows_where mangos3 npc_spellclick_spells "npc_entry = 31897 AND spell_id = 60123 AND quest_start = 0 AND cast_flags = 2 AND condition_id = 0" 1
     check_rows_where mangos3 creature_template_addon "entry = 44214 AND auras = '82690 27985'" 1
     check_rows_where mangos3 creature_template "Entry = 44199 AND UnitFlags = 33554520 AND ModelId1 = 34997" 1
